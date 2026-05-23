@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CareerForge AI – AI-Powered Resume Intelligence System" />
+    <title>CareerForge AI – Resume Intelligence</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/uiverse-components.css" />
+    {% from "components/_cta_button.html" import cf_cta_button %}
+    {% from "components/_pill_button.html" import cf_pill_button %}
+    {% from "components/_secondary_button.html" import cf_secondary_button %}
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="landing-hero">
+        <canvas id="hero-canvas"></canvas>
+
+        <span class="hero-label">AI · RESUME · INTELLIGENCE</span>
+
+        <h1 class="hero-title">
+            <span class="gradient-text">CareerForge</span> AI
+        </h1>
+
+        <p class="hero-subtitle">
+            The intelligent engine to
+            <span class="word-swap">
+                <span class="word active" style="color:var(--accent)">Analyze.</span>
+                <span class="word" style="color:var(--accent-secondary)">Predict.</span>
+                <span class="word" style="color:var(--accent-vibrant)">Evolve.</span>
+                <span class="word" style="color:var(--accent-warn)">Succeed.</span>
+            </span>
+        </p>
+
+        <p class="hero-subtitle" style="margin-top:-8px">
+            Upload your resume. Understand your future.
+        </p>
+
+        <div class="hero-buttons">
+            {{ cf_cta_button(url='/login', text='Student Console', mobile_full=True) }}
+            {{ cf_cta_button(url='/recruiter', text='Recruiter Portal', mobile_full=True) }}
+            {{ cf_cta_button(url='/admin', text='Admin Dashboard', mobile_full=True) }}
+        </div>
+
+        <div style="margin-top:24px;position:relative;z-index:1">
+            {{ cf_secondary_button(url='/student?demo=1', text='Launch Demo — No Account', mobile_full=True) }}
+        </div>
+    </section>
+
+    <!-- ===== NUMBERED SECTIONS ===== -->
+    <div class="numbered-sections">
+        <div class="num-section">
+            <span class="num-label">01</span>
+            <div class="num-content">
+                <h3>Analyze.</h3>
+                <p>Extract skills from your resume using NLP. Get a quantitative score, risk assessment, and detailed
+                    breakdown of your technical profile across 8 skill categories.</p>
+            </div>
+        </div>
+        <div class="num-section">
+            <span class="num-label">02</span>
+            <div class="num-content">
+                <h3>Predict.</h3>
+                <p>Discover career paths matched to your current skill set. Our AI compares your profile against role
+                    templates to surface the best-fit career trajectories with match percentages.</p>
+            </div>
+        </div>
+        <div class="num-section">
+            <span class="num-label">03</span>
+            <div class="num-content">
+                <h3>Evolve.</h3>
+                <p>Simulate improvement with our Digital Twin engine. Add a skill, see your score change, watch new
+                    career paths unlock — all before you even start learning.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCROLL COUNTERS ===== -->
+    <div class="counter-bar">
+        <div class="counter-item">
+            <div class="counter-val" data-count="1200" data-suffix="+">0</div>
+            <div class="counter-label">Resumes Analyzed</div>
+        </div>
+        <div class="counter-item">
+            <div class="counter-val" data-count="45" data-suffix="+">0</div>
+            <div class="counter-label">Career Paths</div>
+        </div>
+        <div class="counter-item">
+            <div class="counter-val" data-count="94" data-suffix="%">0</div>
+            <div class="counter-label">Accuracy</div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="landing-footer">
+        <p>CareerForge AI · Final Year Project · Built with Intelligence</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.8.10, pytest-7.4.4, pluggy-1.5.0 -- C:\Users\Shuddhodhan\AppData\Local\Programs\Python\Python38\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Shuddhodhan\.gemini\antigravity\scratch\careerforge 2- Copy - Copy\careerforge
+plugins: anyio-3.7.1, asyncio-0.23.3, base-url-2.1.0, playwright-0.5.2
+asyncio: mode=strict
+collecting ... collected 12 items
+
+tests/test_agents.py::TestAIAgents::test_ats_scorer_ai PASSED            [  8%]
+tests/test_agents.py::TestAIAgents::test_fallback_mode_on_missing_api_key PASSED [ 16%]
+tests/test_agents.py::TestAIAgents::test_parser_returns_valid_json PASSED [ 25%]
+tests/test_agents.py::TestAIAgents::test_regex_fallback_extraction PASSED [ 33%]
+tests/test_auth.py::AuthTestCase::test_rate_limiting SKIPPED (Skippi...) [ 41%]
+tests/test_auth.py::AuthTestCase::test_register_login_jwt PASSED         [ 50%]
+tests/test_auth.py::AuthTestCase::test_role_based_access PASSED          [ 58%]
+tests/test_analyzer.py::AnalyzerTestCase::test_all_12_domains_load PASSED [ 66%]
+tests/test_analyzer.py::AnalyzerTestCase::test_empty_text_score PASSED   [ 75%]
+tests/test_analyzer.py::AnalyzerTestCase::test_extract_skills_marketing PASSED [ 83%]
+tests/test_analyzer.py::AnalyzerTestCase::test_marketing_domain_score PASSED [ 91%]
+tests/test_analyzer.py::AnalyzerTestCase::test_mismatched_domain_score PASSED [100%]
+
+======================== 11 passed, 1 skipped in 3.62s ========================

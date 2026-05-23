@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login – CareerForge AI Resume Intelligence System" />
+    <title>Login – CareerForge AI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="auth-split">
+        <div class="auth-brand">
+            <div class="auth-brand-logo">
+                <span class="icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"
+                        width="24" height="24">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg></span>
+                <span class="gradient-text">CareerForge</span> AI
+            </div>
+            <p class="auth-brand-tagline">AI-Powered Resume Intelligence System — Analyze, Predict, Evolve.</p>
+        </div>
+        <div class="auth-form-side">
+            <div class="auth-card glass-card">
+                <h1>Welcome <span class="gradient-text">Back</span></h1>
+                <p class="subtitle">Login to your account to continue</p>
+
+                <div id="auth-error" class="flash-msg flash-error" style="display:none; margin-bottom:15px;"></div>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required
+                            autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required
+                            autocomplete="current-password" />
+                    </div>
+                    <button type="submit" class="btn btn-primary auth-btn">Login</button>
+                </form>
+                <p class="auth-footer">
+                    Don't have an account? <a href="/register">Register here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            document.getElementById('auth-error').style.display = 'none';
+
+            const formData = {
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            };
+
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem('access_token', result.access_token);
+                    localStorage.setItem('user', JSON.stringify(result.user));
+
+                    document.getElementById('auth-error').textContent = 'Login successful! Redirecting...';
+                    document.getElementById('auth-error').className = 'flash-msg flash-success';
+                    document.getElementById('auth-error').style.display = 'block';
+
+                    setTimeout(() => {
+                        window.location.href = result.user.role === 'recruiter' ? '/recruiter' : '/student';
+                    }, 1000);
+                } else {
+                    document.getElementById('auth-error').textContent = result.msg || 'Login failed';
+                    document.getElementById('auth-error').style.display = 'block';
+                }
+            } catch (err) {
+                document.getElementById('auth-error').textContent = 'Connection error. Please try again.';
+                document.getElementById('auth-error').style.display = 'block';
+            }
+        });
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

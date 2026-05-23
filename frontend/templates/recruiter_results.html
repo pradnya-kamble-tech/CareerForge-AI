@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% set active_page = 'results' %}
+
+{% block title %}Hiring Results{% endblock %}
+{% block title_suffix %}Recruiter Results{% endblock %}
+
+{% block content %}
+<h2 style="font-family:var(--font-display);font-size:2rem;margin-bottom:8px">
+    <span class="gradient-text">Hiring</span> Results
+</h2>
+<p class="section-desc" style="margin-bottom:24px">Track decisions and feedback for all reviewed candidates.</p>
+
+<div class="results-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:30px">
+    <!-- Shortlisted -->
+    <div class="results-column">
+        <h3 class="column-title"
+            style="color:var(--accent-vibrant);margin-bottom:16px;display:flex;align-items:center;gap:10px">
+            <span class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                </svg></span>
+            Shortlisted ({{ shortlisted|length }})
+        </h3>
+        <div class="card-stack">
+            {% if shortlisted %}
+            {% for r in shortlisted %}
+            <div class="decision-card glass-card">
+                <div class="d-header">
+                    <span class="d-filename">{{ r.filename }}</span>
+                    <span class="stat-pill stat-score">{{ r.score }}</span>
+                </div>
+                <div class="d-body">
+                    <div class="d-meta">
+                        <span class="risk-dot risk-{{ r.risk_level|lower }}"></span>
+                        {{ r.risk_level }} Risk
+                    </div>
+                    <div class="d-insight">{{ r.insight }}</div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p class="empty-note">No candidates shortlisted yet.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Declined / Passed Over -->
+    <div class="results-column">
+        <h3 class="column-title"
+            style="color:var(--accent-danger);opacity:0.8;margin-bottom:16px;display:flex;align-items:center;gap:10px">
+            <span class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="15" y1="9" x2="9" y2="15" />
+                    <line x1="9" y1="9" x2="15" y2="15" />
+                </svg></span>
+            Declined ({{ rejected|length }})
+        </h3>
+        <div class="card-stack">
+            {% if rejected %}
+            {% for r in rejected %}
+            <div class="decision-card glass-card declined" style="opacity:0.75;filter:grayscale(0.3)">
+                <div class="d-header">
+                    <span class="d-filename">{{ r.filename }}</span>
+                    <span class="stat-pill" style="background:rgba(255,100,100,0.1);color:var(--accent-danger)">{{
+                        r.score }}</span>
+                </div>
+                <div class="d-body">
+                    <div class="d-meta" style="font-size:0.8rem;color:var(--text-muted)">
+                        Candidate did not meet current benchmark
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p class="empty-note">No candidates declined yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

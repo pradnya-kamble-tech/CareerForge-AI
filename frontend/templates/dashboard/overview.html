@@ -1,0 +1,129 @@
+{% extends 'dashboard/base.html' %}
+{% block title %}Overview{% endblock %}
+{% block page_title %}Overview{% endblock %}
+
+{% block content %}
+<div class="db-page-header">
+    <h1>Welcome back, <span id="userNameHeader">{{ user or 'User' }}</span></h1>
+    <p>Here is a snapshot of your career progression and resume performance.</p>
+</div>
+
+<!-- Stats Grid -->
+<div class="db-stats-grid" id="statsGrid">
+    <!-- ATS Score -->
+    <div class="db-stat-card" id="statCardScore">
+        <div class="db-stat-icon blue-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+        </div>
+        <div class="db-stat-label">ATS Score</div>
+        <div class="db-stat-value" id="statScoreValue">-</div>
+        <div class="db-stat-change" id="statScoreChange">Upload a resume</div>
+    </div>
+
+    <!-- Job Match % -->
+    <div class="db-stat-card">
+        <div class="db-stat-icon green-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+            </svg>
+        </div>
+        <div class="db-stat-label">Avg Job Match</div>
+        <div class="db-stat-value" id="statMatchValue">-</div>
+        <div class="db-stat-change" id="statMatchChange">Based on saved JDs</div>
+    </div>
+
+    <!-- Skill Gaps -->
+    <div class="db-stat-card">
+        <div class="db-stat-icon amber-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+        </div>
+        <div class="db-stat-label">Critical Gaps</div>
+        <div class="db-stat-value" id="statGapsValue">-</div>
+        <div class="db-stat-change" id="statGapsChange">Missing skills</div>
+    </div>
+
+    <!-- Profile Strength -->
+    <div class="db-stat-card">
+        <div class="db-stat-icon red-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+        </div>
+        <div class="db-stat-label">Profile Strength</div>
+        <div class="db-stat-value" id="statStrengthValue">-</div>
+        <div class="db-stat-change" id="statStrengthChange">Overall rating</div>
+    </div>
+</div>
+
+<div class="db-two-col">
+    <!-- Upload Section -->
+    <div class="db-card">
+        <h3 class="db-card-title">Upload New Resume</h3>
+        <form id="resumeUploadForm" enctype="multipart/form-data" action="#" method="POST">
+            <div class="db-dropzone" id="uploadDropzone">
+                <div class="db-dropzone-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                </div>
+                <h3>Drag & Drop your PDF</h3>
+                <p>or click to browse from your computer</p>
+                <input type="file" id="resumeFileInput" name="resume" accept=".pdf" style="display:none" />
+            </div>
+        </form>
+
+        <div class="db-progress-wrap" id="uploadProgressWrap">
+            <div class="db-progress-label">
+                <span id="uploadStatusText">Analyzing...</span>
+                <span id="uploadPercentText">0%</span>
+            </div>
+            <div class="db-progress-bar">
+                <div class="db-progress-fill" id="uploadProgressBar"></div>
+            </div>
+        </div>
+        <div id="uploadResultContainer" style="margin-top: 16px;"></div>
+    </div>
+
+    <!-- Recent History Section -->
+    <div class="db-card">
+        <h3 class="db-card-title">Recent Analyses</h3>
+        <div class="db-table-wrap">
+            <table class="db-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Filename</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTableBody">
+                    <tr>
+                        <td colspan="4" style="text-align:center;color:var(--text-muted)">
+                            No recent uploads.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        DashboardApp.initOverview();
+    });
+</script>
+{% endblock %}

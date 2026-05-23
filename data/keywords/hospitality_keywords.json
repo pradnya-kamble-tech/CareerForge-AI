@@ -1,0 +1,60 @@
+{
+    "critical": [
+        "Customer Service",
+        "Hotel Management",
+        "Food & Beverage",
+        "Event Planning",
+        "Hospitality Management",
+        "Guest Experience",
+        "Revenue Management",
+        "Front Office Operations",
+        "Safety & Sanitation",
+        "Concierge Services",
+        "Tourism Management",
+        "Facility Operations",
+        "Property Management Systems (PMS)"
+    ],
+    "important": [
+        "Staff Training",
+        "Budgeting",
+        "Menu Engineering",
+        "Customer Loyalty Programs",
+        "Compliance",
+        "Inventory Management",
+        "Yield Management",
+        "Vendor Relations",
+        "Crisis Management",
+        "Employee Motivation"
+    ],
+    "bonus": [
+        "Catering",
+        "Mixology",
+        "Sustainability in Hospitality",
+        "Multilingual Communication",
+        "Travel Coordination",
+        "Spa Management",
+        "Digital Marketing for Hospitality"
+    ],
+    "action_verbs": [
+        "Welcomed",
+        "Served",
+        "Coordinated",
+        "Resolved",
+        "Managed",
+        "Ensured",
+        "Enhanced",
+        "Administered",
+        "Orchestrated",
+        "Provided"
+    ],
+    "soft_skills": [
+        "Patience",
+        "Empathy",
+        "Attention to Detail",
+        "Conflict Resolution",
+        "Interpersonal Skills",
+        "Adaptability",
+        "Professionalism",
+        "Cultural Awareness"
+    ]
+}

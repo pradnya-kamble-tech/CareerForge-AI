@@ -1,0 +1,25 @@
+{% macro cf_eva_loader() %}
+<div id="cf-eva-loader-overlay" class="cf-loader-overlay" aria-busy="true">
+    <div class="cf-eva-loader-container">
+        <div class="cf-modelViewPort">
+            <div class="cf-eva">
+                <div class="cf-head">
+                    <div class="cf-eyeChamber">
+                        <div class="cf-eye"></div>
+                        <div class="cf-eye"></div>
+                    </div>
+                </div>
+                <div class="cf-body">
+                    <div class="cf-hand"></div>
+                    <div class="cf-hand"></div>
+                    <div class="cf-scannerThing"></div>
+                    <div class="cf-scannerOrigin"></div>
+                </div>
+            </div>
+        </div>
+        <p class="cf-loader-text"
+            style="color:var(--accent);margin-top:20px;font-family:var(--font-display);letter-spacing:2px">CORE AI
+            ANALYSING...</p>
+    </div>
+</div>
+{% endmacro %}

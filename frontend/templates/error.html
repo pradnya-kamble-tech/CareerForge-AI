@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ error_code }} – CareerForge AI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="grain-overlay"></div>
+
+    <div
+        style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px">
+        <div
+            style="font-family:var(--font-display);font-size:6rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent-secondary));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1">
+            {{ error_code }}</div>
+        <h2 style="font-family:var(--font-display);font-size:1.4rem;margin:16px 0 8px">{{ error_msg }}</h2>
+        <p style="color:var(--text-muted);margin-bottom:28px">Something went wrong. Please navigate back to a safe page.
+        </p>
+        <a href="/" class="btn btn-primary">← Go Home</a>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

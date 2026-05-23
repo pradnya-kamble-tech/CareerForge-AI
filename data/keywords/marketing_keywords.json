@@ -1,0 +1,61 @@
+{
+    "critical": [
+        "Digital Marketing",
+        "SEO",
+        "SEM",
+        "Content Strategy",
+        "Social Media Management",
+        "Google Analytics",
+        "Email Marketing",
+        "Brand Identity",
+        "Market Research",
+        "CRM",
+        "PPC",
+        "Copywriting",
+        "Campaign Management"
+    ],
+    "important": [
+        "Public Relations",
+        "Influencer Marketing",
+        "A/B Testing",
+        "Conversion Rate Optimization",
+        "Customer Segmentation",
+        "Adobe Creative Suite",
+        "E-commerce",
+        "Sales Funnel",
+        "Content Management Systems",
+        "Inbound Marketing"
+    ],
+    "bonus": [
+        "Video Production",
+        "Podcasting",
+        "Data Visualization",
+        "Multicultural Marketing",
+        "Crisis Management",
+        "Event Planning",
+        "Affiliate Marketing",
+        "User Experience (UX)"
+    ],
+    "action_verbs": [
+        "Executed",
+        "Developed",
+        "Promoted",
+        "Launched",
+        "Analyzed",
+        "Spearheaded",
+        "Positioned",
+        "Increased",
+        "Drafted",
+        "Managed"
+    ],
+    "soft_skills": [
+        "Creativity",
+        "Storytelling",
+        "Networking",
+        "Adaptability",
+        "Collaboration",
+        "Strategic Thinking",
+        "Empathy",
+        "Time Management"
+    ]
+}

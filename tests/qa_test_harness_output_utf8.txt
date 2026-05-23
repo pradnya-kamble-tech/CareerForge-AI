@@ -1,0 +1,43 @@
+﻿python : 2026-05-23 
+15:49:43 | INFO    | 
+CareerForge AI server 
+starting up...
+At line:1 char:28
++ ... ="backend"; 
+python tests/qa_test_ha
+rness.py > tests/qa_tes
+t_harness_o ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (2026-05-23 15   
+ :4... starting up.    
+..:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+2026-05-23 15:49:43 | 
+INFO    | SQLAlchemy, 
+Migrate, JWT and 
+Limiter initialised.
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 5, in 
+<module>
+    from app import 
+app, init_db, 
+db_add_user, 
+db_user_exists
+ImportError: cannot 
+import name 'init_db' 
+from 'app' (C:\Users\Sh
+uddhodhan\.gemini\antig
+ravity\scratch\careerfo
+rge 2- Copy - Copy\care
+erforge\backend\app.py)

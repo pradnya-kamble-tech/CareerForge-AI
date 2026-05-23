@@ -1,0 +1,56 @@
+2026-05-23 13:05:51 | INFO    | CareerForge AI server starting up...
+2026-05-23 13:05:51 | INFO    | SQLite database initialised.
+test_01_empty_pdf (__main__.TestCareerForgeAI_QA)
+Edge Case 1: Empty PDF should be caught by content validator. ... 2026-05-23 13:05:51 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+2026-05-23 13:05:51 | INFO    | Student resume uploaded: ef3dc34e_empty.pdf (user=testqa@careerforge.com)
+2026-05-23 13:05:51 | WARNING | Rejected non-resume PDF: ef3dc34e_empty.pdf
+ok
+test_02_non_pdf_file (__main__.TestCareerForgeAI_QA)
+Edge Case 2: Extension validation. ... 2026-05-23 13:05:51 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+2026-05-23 13:05:51 | WARNING | Invalid file type rejected: text.txt (user=testqa@careerforge.com)
+ok
+test_03_no_file (__main__.TestCareerForgeAI_QA)
+Edge Case 3: No file part. ... 2026-05-23 13:05:51 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_04_ai_demo_flow (__main__.TestCareerForgeAI_QA)
+Validate AI logic end-to-end using the demo-data endpoint (simulates perfect resume). ... 2026-05-23 13:05:51 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+2026-05-23 13:05:56 | INFO    | Demo mode analysis served (id=46450456ca2a4f9fa1542f2aec2d83e5)
+ok
+test_05_digital_twin (__main__.TestCareerForgeAI_QA)
+Digital Twin edge case simulation — both Format A and Format B. ... 2026-05-23 13:05:56 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_06_role_knowledge_teacher (__main__.TestCareerForgeAI_QA)
+TASK 7 – Teacher: role knowledge returns relevant skills, gap is non-empty. ... 2026-05-23 13:06:00 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_07_role_knowledge_hr (__main__.TestCareerForgeAI_QA)
+TASK 7 – HR: role knowledge returns relevant skills, gap is role-specific. ... 2026-05-23 13:06:00 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_08_role_knowledge_engineering (__main__.TestCareerForgeAI_QA)
+TASK 7 – Engineering: role knowledge returns relevant skills, score is non-zero. ... 2026-05-23 13:06:00 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_09_simulator_format_a (__main__.TestCareerForgeAI_QA)
+Simulator Format A: extracted_text + added_skill (frontend format). ... 2026-05-23 13:06:00 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_10_skill_gap_never_empty (__main__.TestCareerForgeAI_QA)
+Skill gap should NEVER be empty, even for unknown roles. ... 2026-05-23 13:06:00 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 8.957s
+
+OK
+✅ SQLite database initialised.
+✅ SQLite database initialised.
+
+[Teacher] top_skills: ['Teaching', 'Training', 'Communication', 'Leadership', 'Writing']
+[Teacher] skill_gap (empty resume): [{'skill': 'Teaching', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Training', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Communication', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Leadership', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Writing', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}]
+
+[HR] top_skills: ['Training', 'Compensation', 'Employee Relations', 'Communication', 'Recruitment']
+[HR] skill_gap (partial): [{'skill': 'Training', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Compensation', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Employee Relations', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Recruitment', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Compliance', 'reason': 'Required for Hr profiles.', 'priority': 'Medium'}]
+
+[Engineering] top_skills: ['Training', 'Communication', 'Leadership', 'Project Management', 'Excel']
+[Engineering] score: 66
+[Engineering] role_profile: ['Training', 'Communication', 'Leadership', 'Project Management', 'Excel']
+[Engineering] skill_gap.missing: [{'skill': 'Training', 'reason': 'Required for ENGINEERING profiles.', 'priority': 'High'}, {'skill': 'Communication', 'reason': 'Required for ENGINEERING profiles.', 'priority': 'High'}, {'skill': 'Leadership', 'reason': 'Required for ENGINEERING profiles.', 'priority': 'High'}, {'skill': 'Excel', 'reason': 'Required for ENGINEERING profiles.', 'priority': 'High'}, {'skill': 'Microsoft Office', 'reason': 'Required for ENGINEERING profiles.', 'priority': 'Medium'}]
+
+[Simulator Format A] score_change=3, role=Hybrid (BUSINESS-DEVELOPMENT / ENGINEERING)

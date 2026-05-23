@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+{% set active_page = 'admin' %}
+
+{% block title %}Admin Control{% endblock %}
+{% block title_suffix %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<p class="section-desc" style="margin-bottom:24px">System-wide analytics and processing logs across all candidates.</p>
+
+<!-- ─── ADMIN ACTIONS ─── -->
+<div class="cf-admin-actions glass-card"
+    style="margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;padding:15px 20px;flex-wrap:wrap;gap:15px">
+    <div style="display:flex;align-items:center;gap:20px">
+        {{ cf_neon_checkbox(id='toggle-maintenance', label='Maintenance Mode',
+        extra_attrs='onclick="console.log(\'Maintenance toggled\')"') }}
+        {{ cf_neon_checkbox(id='toggle-ai-optimization', label='AI Optimization', checked=True) }}
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+        {{ cf_pill_button(id='btn-refresh-admin', text='Refresh Analytics', onclick="location.reload()") }}
+        {{ cf_download_button(id='export-admin-btn', url='#', text='System Report', icon='download', mobile_full=True)
+        }}
+    </div>
+</div>
+
+<!-- ─── STATS CARDS ─── -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon-wrap" style="margin:0 auto 8px"><span class="icon-svg"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="var(--accent)" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg></span></div>
+        <div class="stat-value">{{ total_users }}</div>
+        <div class="stat-label">Total Users {{ cf_tooltip(id='total-users', content='Unique accounts registered across
+            the
+            platform, including Students, Recruiters, and Administrators.') }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon-wrap" style="margin:0 auto 8px"><span class="icon-svg"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="var(--accent-vibrant)" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                </svg></span></div>
+        <div class="stat-value">{{ total }}</div>
+        <div class="stat-label">Resumes Analysed {{ cf_tooltip(id='resumes-count', content='Total number of successful
+            AI-driven
+            resume analysis operations performed system-wide.') }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon-wrap" style="margin:0 auto 8px"><span class="icon-svg"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="#FFB627" stroke-width="2">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                    <polyline points="16 7 22 7 22 13" />
+                </svg></span></div>
+        <div class="stat-value">{{ avg_score }}</div>
+        <div class="stat-label">Avg System Score {{ cf_tooltip(id='avg-score', content='The aggregate mean score
+            calculated across
+            every analysed profile in the database.') }}</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon-wrap" style="margin:0 auto 8px"><span class="icon-svg"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="var(--accent-warn)" stroke-width="2">
+                    <rect x="4" y="2" width="16" height="20" rx="2" />
+                    <line x1="8" y1="6" x2="16" y2="6" />
+                    <line x1="8" y1="10" x2="16" y2="10" />
+                    <line x1="8" y1="14" x2="12" y2="14" />
+                </svg></span></div>
+        <div class="stat-value">{{ total_logs }}</div>
+        <div class="stat-label">System Events</div>
+    </div>
+</div>
+
+{% if total > 0 %}
+<div class="panels-grid">
+    <!-- Score Distribution -->
+    <div class="panel">
+        <h3><span class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                </svg></span> Score Distribution</h3>
+        <div style="height:200px">
+            <canvas id="scoreChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Risk Distribution -->
+    <div class="panel">
+        <h3><span class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-danger)"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg></span> Risk Map</h3>
+        <div style="height:200px">
+            <canvas id="riskChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Top Skills -->
+    <div class="panel">
+        <h3><span class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-vibrant)"
+                    stroke-width="2">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></span> Trending Skills</h3>
+        <div style="margin-top:10px">
+            {% for skill, count in top_skills %}
+            <div class="skill-row" style="--delay: {{ loop.index0 * 0.05 }}s">
+                <div class="skill-rank skill-rank-{{ loop.index if loop.index <=3 else 'default' }}">{{
+                    loop.index }}</div>
+                <div class="skill-name">{{ skill }}</div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: {{ (count / total * 100)|round }}%"></div>
+                </div>
+                <div class="skill-count">{{ count }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Activity Log Summary -->
+    <div class="panel">
+        <h3><span class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2">
+                    <path d="M12 20V10" />
+                    <path d="M18 20V4" />
+                    <path d="M6 20v-4" />
+                </svg></span> Platform Activity</h3>
+        <div style="height:200px">
+            <canvas id="trendChart"></canvas>
+        </div>
+    </div>
+
+    <!-- ─── USER MANAGEMENT (Simple list) ─── -->
+    <div class="panel panel-full" style="margin-top:24px">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" width="18" height="18"
+                style="vertical-align:-3px">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg> User Management</h3>
+        {% if all_users %}
+        <div style="overflow-x:auto;margin-top:12px">
+            <table style="width:100%;font-size:.85rem;border-collapse:collapse">
+                <thead>
+                    <tr style="color:var(--text-muted);text-align:left;border-bottom:1px solid var(--bg-glass-border)">
+                        <th style="padding:10px 4px">Username</th>
+                        <th style="padding:10px 4px">Role</th>
+                        <th style="padding:10px 4px">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in all_users %}
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                        <td style="padding:10px 4px;font-weight:600;color:var(--accent)">{{ u.username }}</td>
+                        <td style="padding:10px 4px"><span class="stat-pill stat-insight">{{ u.role }}</span></td>
+                        <td style="padding:10px 4px;color:var(--text-muted)">{{ u.created_at[:10] if u.created_at else
+                            'Legacy' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- ─── SYSTEM LOGS ─── -->
+    <div class="panel panel-full" style="margin-top:24px">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warn)" stroke-width="2" width="18" height="18"
+                style="vertical-align:-3px">
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <line x1="8" y1="6" x2="16" y2="6" />
+                <line x1="8" y1="10" x2="16" y2="10" />
+                <line x1="8" y1="14" x2="12" y2="14" />
+            </svg> System Logs (Recent)</h3>
+        {% if db_logs %}
+        <div style="overflow-x:auto;margin-top:12px;max-height:300px;overflow-y:auto">
+            <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+                <thead>
+                    <tr style="color:var(--text-muted);text-align:left;position:sticky;top:0;background:var(--bg-card)">
+                        <th style="padding:6px 4px">Action</th>
+                        <th style="padding:6px 4px">User</th>
+                        <th style="padding:6px 4px">Detail</th>
+                        <th style="padding:6px 4px">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for log in db_logs %}
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.04)">
+                        <td style="padding:5px 4px"><span
+                                class="log-action log-{{ log.action|lower|replace('_','-') }}">{{ log.action
+                                }}</span></td>
+                        <td style="padding:5px 4px;color:var(--text-secondary)">{{ log.user }}</td>
+                        <td
+                            style="padding:5px 4px;color:var(--text-muted);max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+                            {{ log.detail }}</td>
+                        <td style="padding:5px 4px;color:var(--text-muted);font-size:.75rem">{{
+                            log.created_at[:16] if log.created_at else '' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p style="color:var(--text-muted);font-style:italic">No log entries yet.</p>
+        {% endif %}
+    </div>
+
+</div>
+
+{% else %}
+<div class="empty-state">
+    <div class="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5"
+            width="48" height="48">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+        </svg></div>
+    <p>No resumes have been processed yet.</p>
+    <p>Upload resumes via the <a href="/recruiter">Recruiter Dashboard</a> to see analytics here.</p>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if total > 0 %}
+<script>
+    (function () {
+        const gridColor = 'rgba(255,255,255,.08)';
+        const fontColor = '#999';
+
+        /* ── Score Distribution Bar Chart ── */
+        const scoreCtx = document.getElementById('scoreChart');
+        if (scoreCtx) {
+            const scoreData = {{ score_dist | tojson | safe }};
+    new Chart(scoreCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Low (0-39)', 'Mid (40-69)', 'High (70-100)'],
+            datasets: [{
+                label: 'Candidates',
+                data: [scoreData['0-39'] || 0, scoreData['40-69'] || 0, scoreData['70-100'] || 0],
+                backgroundColor: ['rgba(255,77,109,.7)', 'rgba(255,182,39,.7)', 'rgba(0,245,212,.7)'],
+                borderColor: ['#ff4d6d', '#ffb627', '#00f5d4'],
+                borderWidth: 1,
+                borderRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, ticks: { color: fontColor, stepSize: 1 }, grid: { color: gridColor } },
+                x: { ticks: { color: fontColor }, grid: { display: false } }
+            }
+        }
+    });
+        }
+
+    /* ── Risk Distribution Doughnut Chart ── */
+    const riskCtx = document.getElementById('riskChart');
+    if (riskCtx) {
+        const riskData = {{ risk_dist | tojson | safe }};
+    new Chart(riskCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Low', 'Medium', 'High'],
+            datasets: [{
+                data: [riskData['Low'] || 0, riskData['Medium'] || 0, riskData['High'] || 0],
+                backgroundColor: ['rgba(0,245,212,.75)', 'rgba(255,182,39,.75)', 'rgba(255,77,109,.75)'],
+                borderColor: ['#00f5d4', '#ffb627', '#ff4d6d'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '55%',
+            plugins: {
+                legend: { position: 'bottom', labels: { color: fontColor, padding: 16 } }
+            }
+        }
+    });
+        }
+    /* ── Trend Line Chart ── */
+    const trendCtx = document.getElementById('trendChart');
+    if (trendCtx) {
+        new Chart(trendCtx, {
+            type: 'line',
+            data: {
+                labels: {{ trend_labels| tojson | safe }},
+    datasets: [{
+        label: 'Uploads',
+        data: {{ trend_data| tojson | safe }},
+        borderColor: '#00f5d4',
+        backgroundColor: 'rgba(0, 245, 212, 0.1)',
+        borderWidth: 2,
+        tension: 0.4,
+        fill: true,
+        pointBackgroundColor: '#00f5d4',
+        pointBorderColor: '#00f5d4',
+        pointRadius: 4
+                    }]
+                },
+    options: {
+        responsive: true,
+            maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, ticks: { color: fontColor, stepSize: 1 }, grid: { color: gridColor } },
+            x: { ticks: { color: fontColor }, grid: { display: false } }
+        }
+    }
+            });
+        }
+    }) ();
+</script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% macro cf_download_button(
+id='',
+url='',
+text='Download',
+extra_classes='',
+extra_attrs='',
+aria_label='',
+disabled=False,
+loading=False,
+mobile_full=False,
+icon='',
+inline_style=''
+) %}
+<div class="cf-download-container {{ 'cf-full-width' if mobile_full }} {{ extra_classes }}" style="{{ inline_style }}">
+    <a href="{{ url if not disabled and not loading else 'javascript:void(0)' }}" id="{{ id }}" class="cf-download-btn"
+        aria-label="{{ aria_label or text }}" {% if disabled or loading %}disabled{% endif %} {% if loading
+        %}data-loading="true" {% endif %} {{ extra_attrs|safe }}>
+        <div class="cf-circle">
+            <div class="cf-icon cf-flex-center">
+                {% if icon == 'download' or not icon %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                {% else %}
+                {{ icon | safe }}
+                {% endif %}
+            </div>
+            <div class="cf-square"></div>
+        </div>
+        <p class="cf-title">{{ text }}</p>
+    </a>
+</div>
+{% endmacro %}

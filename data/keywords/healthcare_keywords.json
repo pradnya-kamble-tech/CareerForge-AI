@@ -1,0 +1,64 @@
+{
+    "critical": [
+        "Patient Care",
+        "Clinical Assessment",
+        "EMR",
+        "HIPAA",
+        "Medication Administration",
+        "Vitals Monitoring",
+        "Infection Control",
+        "Case Management",
+        "Phlebotomy",
+        "Wound Care",
+        "Triage",
+        "Electronic Health Records",
+        "Nursing Care Plan"
+    ],
+    "important": [
+        "Patient Education",
+        "Medical Coding",
+        "ICD-10",
+        "BLS",
+        "ACLS",
+        "Pharmacology",
+        "Radiology",
+        "Lab Analysis",
+        "Occupational Health",
+        "Physical Therapy",
+        "Medical Terminology",
+        "Telemetry"
+    ],
+    "bonus": [
+        "Telemedicine",
+        "Healthcare IT",
+        "Quality Assurance",
+        "Public Health",
+        "Clinical Research",
+        "Surgical Assistance",
+        "Geriatric Care",
+        "Pediatric Care",
+        "Home Health"
+    ],
+    "action_verbs": [
+        "Diagnosed",
+        "Administered",
+        "Treated",
+        "Monitored",
+        "Coordinated",
+        "Assessed",
+        "Documented",
+        "Rehabilitated",
+        "Sterilized",
+        "Counseled"
+    ],
+    "soft_skills": [
+        "Empathy",
+        "Compassion",
+        "Critical Thinking",
+        "Cultural Competency",
+        "Patience",
+        "Attention to Detail",
+        "Communication",
+        "Resilience"
+    ]
+}

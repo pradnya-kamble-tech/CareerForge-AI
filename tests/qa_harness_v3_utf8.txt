@@ -1,0 +1,144 @@
+﻿python : 2026-05-23 
+15:55:57 | INFO    | 
+CareerForge AI server 
+starting up...
+At line:1 char:28
++ ... ="backend"; 
+python tests/qa_test_ha
+rness.py > tests/qa_har
+ness_v3.txt ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (2026-05-23 15   
+ :5... starting up.    
+..:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+2026-05-23 15:55:57 | 
+INFO    | SQLAlchemy, 
+Migrate, JWT and 
+Limiter initialised.
+test_01_empty_pdf (__ma
+in__.TestCareerForgeAI_
+QA)
+Edge Case 1: Empty PDF 
+should be caught by 
+content validator. ... 
+ok
+test_02_non_pdf_file (_
+_main__.TestCareerForge
+AI_QA)
+Edge Case 2: Extension 
+validation. ... ok
+test_03_no_file (__main
+__.TestCareerForgeAI_QA
+)
+Edge Case 3: No file 
+part. ... ok
+test_04_ai_demo_flow (_
+_main__.TestCareerForge
+AI_QA)
+Validate AI logic 
+end-to-end using the 
+demo-data endpoint 
+(simulates perfect 
+resume). ... 
+2026-05-23 15:55:59 | 
+INFO    | Demo mode 
+analysis served (id=97e
+ea5eabeb04407ae60365ac7
+ba2709)
+ok
+test_05_digital_twin (_
+_main__.TestCareerForge
+AI_QA)
+Digital Twin edge case 
+simulation ù Format B. 
+... ok
+test_06_role_knowledge_
+teacher (__main__.TestC
+areerForgeAI_QA)
+TASK 7 û Teacher: role 
+knowledge returns 
+relevant skills, gap 
+is non-empty. ... ok
+test_07_role_knowledge_
+hr (__main__.TestCareer
+ForgeAI_QA)
+TASK 7 û HR: role 
+knowledge returns 
+relevant skills, gap 
+is role-specific. ... 
+ok
+test_08_role_knowledge_
+engineering (__main__.T
+estCareerForgeAI_QA)
+TASK 7 û Engineering: 
+role knowledge returns 
+relevant skills, score 
+is non-zero. ... FAIL
+test_09_simulator_forma
+t_a (__main__.TestCaree
+rForgeAI_QA)
+Simulator Format A: 
+extracted_text + 
+added_skill (frontend 
+format). ... ok
+test_10_skill_gap_never
+_empty (__main__.TestCa
+reerForgeAI_QA)
+Skill gap should NEVER 
+be empty, even for 
+unknown roles. ... ok
+
+=======================
+=======================
+=======================
+=
+FAIL: test_08_role_know
+ledge_engineering (__ma
+in__.TestCareerForgeAI_
+QA)
+TASK 7 û Engineering: 
+role knowledge returns 
+relevant skills, score 
+is non-zero.
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 191, 
+in test_08_role_knowled
+ge_engineering
+    self.assertGreater(
+result.get("score", 
+0), 0, "Score is 0 for 
+Engineering resume.")
+AssertionError: 0 not 
+greater than 0 : Score 
+is 0 for Engineering 
+resume.
+
+-----------------------
+-----------------------
+-----------------------
+-
+Ran 10 tests in 2.750s
+
+FAILED (failures=1)
+
+[Teacher] top_skills: ['Teaching', 'Training', 'Communication', 'Leadership', 'Writing']
+
+[HR] top_skills: ['Training', 'Compensation', 'Employee Relations', 'Communication', 'Recruitment']
+
+[Simulator Format A] result: {'message': 'Digital twin simulator is being updated.', 'success': True}

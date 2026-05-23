@@ -1,0 +1,61 @@
+{
+    "critical": [
+        "Legal Research",
+        "Contract Drafting",
+        "Litigation",
+        "Compliance",
+        "Corporate Law",
+        "Intellectual Property",
+        "Legal Writing",
+        "Westlaw",
+        "LexisNexis",
+        "Document Review",
+        "Regulatory Compliance",
+        "Employment Law",
+        "Contract Negotiation"
+    ],
+    "important": [
+        "Dispute Resolution",
+        "Arbitration",
+        "Mediation",
+        "Risk Assessment",
+        "Case Management",
+        "Client Counseling",
+        "Trial Preparation",
+        "Legal Ethics",
+        "Administrative Law",
+        "Bankruptcy Law"
+    ],
+    "bonus": [
+        "Tax Law",
+        "Environmental Law",
+        "International Law",
+        "Cybersecurity Law",
+        "Privacy Law",
+        "Healthcare Law",
+        "Patent Law",
+        "Maritime Law"
+    ],
+    "action_verbs": [
+        "Drafted",
+        "Negotiated",
+        "Litigated",
+        "Advised",
+        "Researched",
+        "Represented",
+        "Reviewed",
+        "Settled",
+        "Analyzed",
+        "Defended"
+    ],
+    "soft_skills": [
+        "Integrity",
+        "Analytical Thinking",
+        "Persuasion",
+        "Confidentiality",
+        "Persistence",
+        "Communication",
+        "Precision",
+        "Problem-solving"
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "critical": [
+        "Supply Chain Management",
+        "Process Optimization",
+        "Project Management",
+        "Inventory Control",
+        "Procurement",
+        "Resource Allocation",
+        "Quality Management",
+        "Six Sigma",
+        "Logistics",
+        "Budget Management",
+        "Vendor Management",
+        "Strategic Planning",
+        "Standard Operating Procedures (SOPs)"
+    ],
+    "important": [
+        "Lean Manufacturing",
+        "Continuous Improvement",
+        "Facilities Management",
+        "Contract Management",
+        "Data Analysis",
+        "ERP Systems",
+        "KPI Tracking",
+        "Change Management",
+        "Health and Safety Compliance"
+    ],
+    "bonus": [
+        "Automation",
+        "Blockchain in Logistics",
+        "Sustainable Operations",
+        "Cross-functional Leadership",
+        "Risk Mitigation",
+        "Capacity Planning",
+        "Demand Forecasting"
+    ],
+    "action_verbs": [
+        "Optimized",
+        "Streamlined",
+        "Monitored",
+        "Coordinated",
+        "Negotiated",
+        "Implemented",
+        "Forecasted",
+        "Reduced",
+        "Increased",
+        "Oversaw"
+    ],
+    "soft_skills": [
+        "Critical Thinking",
+        "Problem-solving",
+        "Decision Making",
+        "Time Management",
+        "Organization",
+        "Leadership",
+        "Accountability",
+        "Adaptability"
+    ]
+}

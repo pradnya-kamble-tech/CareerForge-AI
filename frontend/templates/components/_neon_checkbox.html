@@ -1,0 +1,27 @@
+{% macro cf_neon_checkbox(
+id='',
+name='',
+checked=False,
+disabled=False,
+label='',
+extra_classes='',
+extra_attrs='',
+aria_label='',
+loading=False,
+inline_style=''
+) %}
+<label class="cf-checkbox-wrapper {{ extra_classes|default('') }} {{ 'cf-disabled' if disabled or loading }}"
+    style="{{ inline_style }}" {% if loading %}data-loading="true" {% endif %} {{ extra_attrs|safe }}>
+    <input type="checkbox" id="{{ id }}" name="{{ name }}" {% if checked %}checked{% endif %} {% if disabled or loading
+        %}disabled{% endif %} aria-label="{{ aria_label or label }}">
+    <span class="cf-checkmark cf-flex-center">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" width="12" height="12">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+    </span>
+    {% if label %}
+    <span class="cf-checkbox-label" style="margin-left:8px;color:rgba(255,255,255,0.7);font-size:13px">{{ label
+        }}</span>
+    {% endif %}
+</label>
+{% endmacro %}

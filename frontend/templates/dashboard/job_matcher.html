@@ -1,0 +1,95 @@
+{% extends 'dashboard/base.html' %}
+{% block title %}Job Matcher{% endblock %}
+{% block page_title %}Job Matcher{% endblock %}
+
+{% block content %}
+<div class="db-page-header">
+    <h1>AI Job Matcher</h1>
+    <p>Paste a job description to see how well your profile matches and identify missing requirements.</p>
+</div>
+
+<div class="db-two-col">
+    <!-- Left Column: Input -->
+    <div class="db-card">
+        <h3 class="db-card-title">Job Description</h3>
+        <div style="margin-bottom: 16px;">
+            <input type="text" id="jobTitleInput" placeholder="Job Title (e.g. Senior Product Manager)"
+                style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; outline: none; margin-bottom: 12px; font-family: var(--font);">
+            <textarea class="db-jd-textarea" id="jobDescriptionInput"
+                placeholder="Paste the full job description here..."></textarea>
+        </div>
+        <button class="db-btn db-btn-primary" id="analyzeJobBtn">
+            <span class="btn-text">Analyze Match</span>
+            <div class="db-spinner"></div>
+        </button>
+    </div>
+
+    <!-- Right Column: Results & History -->
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+
+        <!-- Results Card (Hidden init) -->
+        <div class="db-card db-match-result" id="matchResultCard">
+            <h3 class="db-card-title">Match Results</h3>
+
+            <div class="db-match-score-ring" id="matchScoreRing">
+                <span id="matchScoreText">0%</span>
+            </div>
+            <div style="text-align: center; margin-bottom: 24px;" id="matchStatusText">
+                Your profile is a strong match for this role.
+            </div>
+
+            <div class="db-three-col" style="gap: 12px;">
+                <div
+                    style="background: var(--success-bg); padding: 12px; border-radius: var(--radius-sm); text-align: center;">
+                    <div style="font-size: 20px; font-weight: 700; color: var(--success);" id="skillsMatchedCount">0
+                    </div>
+                    <div style="font-size: 12px; color: var(--success); font-weight: 500;">Matched</div>
+                </div>
+                <div
+                    style="background: var(--danger-bg); padding: 12px; border-radius: var(--radius-sm); text-align: center;">
+                    <div style="font-size: 20px; font-weight: 700; color: var(--danger);" id="skillsMissingCount">0
+                    </div>
+                    <div style="font-size: 12px; color: var(--danger); font-weight: 500;">Missing</div>
+                </div>
+                <div
+                    style="background: var(--primary-light); padding: 12px; border-radius: var(--radius-sm); text-align: center;">
+                    <div style="font-size: 20px; font-weight: 700; color: var(--primary);" id="experienceMatchCount">N/A
+                    </div>
+                    <div style="font-size: 12px; color: var(--primary); font-weight: 500;">Exp. Match</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+                <h4 style="font-size: 14px; margin-bottom: 8px;">Recommendations</h4>
+                <ul id="matchRecommendations"
+                    style="font-size: 13px; color: var(--text-secondary); padding-left: 18px; line-height: 1.6;">
+                    <li>Update your resume to emphasize these skills.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 24px; text-align: right;">
+                <button class="db-btn db-btn-outline" id="saveJobBtn">Save Match</button>
+            </div>
+        </div>
+
+        <!-- Saved Jobs Card -->
+        <div class="db-card">
+            <h3 class="db-card-title">Saved Job Descriptions</h3>
+            <div id="savedJobsList">
+                <div class="db-empty" id="noSavedJobs" style="padding: 20px;">
+                    <p>No saved job matches yet.</p>
+                </div>
+                <!-- js injected -->
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        DashboardApp.initJobMatcher();
+    });
+</script>
+{% endblock %}

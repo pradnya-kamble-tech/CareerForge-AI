@@ -1,0 +1,24 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.8.10, pytest-7.4.4, pluggy-1.5.0
+rootdir: C:\Users\Shuddhodhan\.gemini\antigravity\scratch\careerforge 2- Copy - Copy\careerforge
+plugins: anyio-3.7.1, asyncio-0.23.3, base-url-2.1.0, playwright-0.5.2
+asyncio: mode=strict
+collected 4 items / 1 error
+
+=================================== ERRORS ====================================
+_____________________ ERROR collecting tests/test_auth.py _____________________
+tests\test_auth.py:12: in <module>
+    from app import app
+backend\app.py:519: in <module>
+    def api_parse_resume():
+..\..\..\..\..\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sansio\scaffold.py:366: in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+..\..\..\..\..\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sansio\scaffold.py:46: in wrapper_func
+    return f(self, *args, **kwargs)
+..\..\..\..\..\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sansio\app.py:661: in add_url_rule
+    raise AssertionError(
+E   AssertionError: View function mapping is overwriting an existing endpoint function: api_parse_resume
+=========================== short test summary info ===========================
+ERROR tests/test_auth.py - AssertionError: View function mapping is overwriti...
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 2.57s ===============================

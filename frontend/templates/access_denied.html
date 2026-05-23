@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Denied – CareerForge AI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+        .denied-section {
+            max-width: 520px;
+            margin: 120px auto;
+            text-align: center;
+            animation: fadeUp .5s ease-out;
+        }
+
+        .denied-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            background: rgba(255, 77, 109, .1);
+            border: 2px solid rgba(255, 77, 109, .3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .denied-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .denied-section p {
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+
+        .denied-section .role-info {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 100px;
+            font-size: .85rem;
+            font-weight: 700;
+            background: rgba(255, 77, 109, .08);
+            border: 1px solid rgba(255, 77, 109, .25);
+            color: var(--accent-danger);
+            margin-bottom: 24px;
+        }
+
+        .denied-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="grain-overlay"></div>
+
+    <main>
+        <section class="denied-section">
+            <div class="denied-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-danger)" stroke-width="2"
+                    width="32" height="32">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                </svg></div>
+            <h2>Access <span class="gradient-text">Denied</span></h2>
+            <div class="role-info">Your role: {{ role }}</div>
+            <p>You don't have permission to access this page. Please navigate to a section available for your role.</p>
+            <div class="denied-actions">
+                {% if role == 'Student' %}
+                <a href="/student" class="btn btn-primary">Go to Dashboard</a>
+                {% elif role == 'Recruiter' %}
+                <a href="/recruiter" class="btn btn-primary">Go to Recruiter</a>
+                {% elif role == 'Admin' %}
+                <a href="/admin" class="btn btn-primary">Go to Admin</a>
+                {% endif %}
+                <a href="/logout" class="btn btn-outline">Switch Account</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

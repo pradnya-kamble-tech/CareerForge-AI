@@ -1,0 +1,20 @@
+{% macro cf_cta_button(
+url='',
+text='',
+id='',
+extra_classes='',
+extra_attrs='',
+aria_label='',
+disabled=False,
+loading=False,
+mobile_full=False,
+inline_style=''
+) %}
+<a href="{{ url if not disabled and not loading else 'javascript:void(0)' }}" id="{{ id }}"
+    class="cf-neon-cta {{ extra_classes|default('') }} {{ 'cf-full-width' if mobile_full }}" style="{{ inline_style }}"
+    data-text="{{ text }}" aria-label="{{ aria_label or text }}" {% if disabled or loading %}disabled{% endif %} {% if
+    loading %}data-loading="true" {% endif %} {{ extra_attrs|safe }}>
+    {{ text }}
+    <span class="cf-hover-text" aria-hidden="true" data-text="{{ text }}">{{ text }}</span>
+</a>
+{% endmacro %}

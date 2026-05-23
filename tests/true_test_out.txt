@@ -1,0 +1,49 @@
+============================= test session starts =============================
+platform win32 -- Python 3.8.10, pytest-7.4.4, pluggy-1.5.0 -- C:\Users\Shuddhodhan\AppData\Local\Programs\Python\Python38\python.exe
+cachedir: .pytest_cache
+rootdir: c:\Users\Shuddhodhan\.gemini\antigravity\scratch\careerforge 2- Copy - Copy\careerforge
+plugins: anyio-3.7.1, asyncio-0.23.3, base-url-2.1.0, playwright-0.5.2
+asyncio: mode=strict
+collecting ... collected 4 items
+
+tests/test_recruiter.py::test_recruiter_search FAILED                    [ 25%]
+tests/test_recruiter.py::test_user_cannot_access_recruiter FAILED        [ 50%]
+tests/test_recruiter.py::test_shortlist_adds_to_pipeline FAILED          [ 75%]
+tests/test_recruiter.py::test_pipeline_stage_update FAILED               [100%]
+
+================================== FAILURES ===================================
+____________________________ test_recruiter_search ____________________________
+tests\test_recruiter.py:78: in test_recruiter_search
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <WrapperTestResponse streamed [404 NOT FOUND]>.status_code
+------------------------------ Captured log call ------------------------------
+WARNING  CareerForge:app.py:766 404 Not Found: /api/recruiter/search
+______________________ test_user_cannot_access_recruiter ______________________
+tests\test_recruiter.py:99: in test_user_cannot_access_recruiter
+    assert response.status_code == 403
+E   assert 404 == 403
+E    +  where 404 = <WrapperTestResponse streamed [404 NOT FOUND]>.status_code
+------------------------------ Captured log call ------------------------------
+WARNING  CareerForge:app.py:766 404 Not Found: /api/recruiter/search
+_______________________ test_shortlist_adds_to_pipeline _______________________
+tests\test_recruiter.py:109: in test_shortlist_adds_to_pipeline
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <WrapperTestResponse streamed [404 NOT FOUND]>.status_code
+------------------------------ Captured log call ------------------------------
+WARNING  CareerForge:app.py:766 404 Not Found: /api/recruiter/pipeline/shortlist/3
+_________________________ test_pipeline_stage_update __________________________
+tests\test_recruiter.py:137: in test_pipeline_stage_update
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <WrapperTestResponse streamed [404 NOT FOUND]>.status_code
+------------------------------ Captured log call ------------------------------
+WARNING  CareerForge:app.py:766 404 Not Found: /api/recruiter/pipeline/shortlist/3
+WARNING  CareerForge:app.py:766 404 Not Found: /api/recruiter/pipeline/3/stage
+=========================== short test summary info ===========================
+FAILED tests/test_recruiter.py::test_recruiter_search - assert 404 == 200
+FAILED tests/test_recruiter.py::test_user_cannot_access_recruiter - assert 40...
+FAILED tests/test_recruiter.py::test_shortlist_adds_to_pipeline - assert 404 ...
+FAILED tests/test_recruiter.py::test_pipeline_stage_update - assert 404 == 200
+============================== 4 failed in 7.56s ==============================

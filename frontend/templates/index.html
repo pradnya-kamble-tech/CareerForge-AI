@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+{% from 'components/_eva_loader.html' import cf_eva_loader %}
+{% from 'components/_polygon_loader.html' import cf_polygon_loader %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CareerForge AI – Student Dashboard" />
+    <title>Dashboard – CareerForge AI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/uiverse-components.css" />
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="grain-overlay"></div>
+
+    {{ cf_eva_loader() }}
+    {{ cf_polygon_loader() }}
+
+    <div class="app-layout">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-logo"><span class="bolt"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                        stroke-width="2.5" width="18" height="18">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg></span> CareerForge</div>
+            <nav class="sidebar-nav">
+                <a href="/student" class="sidebar-link active"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <rect x="3" y="3" width="7" height="7" rx="1" />
+                            <rect x="14" y="3" width="7" height="7" rx="1" />
+                            <rect x="3" y="14" width="7" height="7" rx="1" />
+                            <rect x="14" y="14" width="7" height="7" rx="1" />
+                        </svg></span> Dashboard</a>
+                <a href="#upload-section" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg></span> Upload Resume</a>
+                <a href="#dashboard" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <rect x="4" y="2" width="16" height="20" rx="2" />
+                            <line x1="8" y1="6" x2="16" y2="6" />
+                            <line x1="8" y1="10" x2="16" y2="10" />
+                            <line x1="8" y1="14" x2="12" y2="14" />
+                        </svg></span> Results</a>
+                <a href="#sim-section" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg></span> Simulator</a>
+                <a href="#gap-section" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg></span> Skill Gap</a>
+                <a href="/download-report" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg></span> Download Report</a>
+                {% if role in ['Recruiter', 'Admin'] %}
+                <a href="/recruiter" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg></span> Recruiter</a>
+                {% endif %}
+                {% if role == 'Admin' %}
+                <a href="/admin" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg></span> Admin</a>
+                {% endif %}
+            </nav>
+            <div class="sidebar-footer">
+                <span class="sidebar-role">{{ role }}</span>
+                <span class="sidebar-user">{{ user }}</span>
+                <a href="/logout" class="sidebar-logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" width="16" height="16">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="flash-msg flash-{{ category }}" style="margin-bottom: 20px;">{{ message }}</div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <!-- Demo Banner -->
+            <div id="demo-banner" class="demo-banner hidden">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"
+                    style="vertical-align:-3px">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+                DEMO MODE ACTIVE — Showing sample analysis &nbsp;|&nbsp;
+                <a href="/">Back to Landing</a>
+            </div>
+
+            <!-- Upload Section -->
+            <section id="upload-section">
+                <h2 style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:20px">
+                    Upload Your <span class="accent">Resume</span>
+                </h2>
+
+                <div id="upload-area" class="upload-zone">
+                    <div class="upload-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)"
+                            stroke-width="1.5" width="48" height="48">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="12" y1="18" x2="12" y2="12" />
+                            <polyline points="9 15 12 12 15 15" />
+                        </svg></div>
+                    <p class="upload-label">Drag & drop your PDF here</p>
+                    <p class="upload-hint">or click to browse files</p>
+                    <input type="file" id="resume-input" accept=".pdf" hidden />
+                </div>
+
+                <div id="file-preview" class="file-preview hidden">
+                    <div class="file-info">
+                        <span class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                                stroke-width="2" width="20" height="20">
+                                <path
+                                    d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                            </svg></span>
+                        <div>
+                            <p id="file-name" class="file-name"></p>
+                            <p id="file-size" class="file-size"></p>
+                        </div>
+                    </div>
+                    <button id="remove-file-btn" class="remove-file" title="Remove file">&times;</button>
+                </div>
+
+                <button id="upload-btn" class="btn btn-primary" style="width:100%;margin-top:16px" disabled>Upload
+                    Resume</button>
+                <div id="upload-status" class="upload-status hidden"></div>
+            </section>
+
+            <!-- ===== DASHBOARD ===== -->
+            <div id="dashboard" class="hidden" style="margin-top:40px">
+
+                <!-- Quick Stats -->
+                <div class="dash-header">
+                    <h2><span class="icon-svg icon-lg"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg></span> Analysis <span class="gradient-text">Dashboard</span></h2>
+                    <div class="quick-stats">
+                        <div class="quick-stat">
+                            <span class="quick-stat-val" id="qs-skills">0</span>
+                            <span class="quick-stat-label">Skills</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="quick-stat-val" id="qs-score">0</span>
+                            <span class="quick-stat-label">Score</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="quick-stat-val" id="qs-risk">—</span>
+                            <span class="quick-stat-label">Risk</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="quick-stat-val" id="qs-roles">0</span>
+                            <span class="quick-stat-label">Roles</span>
+                        </div>
+                    </div>
+                    <a href="/download-report" id="download-report-btn" class="btn btn-download"><svg
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg> Download Report</a>
+                </div>
+
+                <!-- 1. Extracted Text -->
+                <section id="results-section" class="dash-card">
+                    <div class="dash-card-title" id="toggle-text-btn">
+                        <span><span class="section-num">01</span> Extracted Text</span>
+                        <span class="collapse-icon">&#x25BE;</span>
+                    </div>
+                    <div id="text-collapsible" class="collapsible">
+                        <div class="results-box">
+                            <div class="results-header">
+                                <span id="results-filename" class="results-filename"><svg viewBox="0 0 24 24"
+                                        fill="none" stroke="var(--accent)" stroke-width="2" width="16" height="16">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                        <polyline points="14 2 14 8 20 8" />
+                                    </svg> resume.pdf</span>
+                                <button id="copy-text-btn" class="btn-icon" title="Copy to clipboard"><svg
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        width="14" height="14">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" />
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                    </svg> Copy</button>
+                            </div>
+                            <pre id="extracted-text" class="extracted-text"></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Detected Skills -->
+                <section id="skills-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">02</span> Detected Skills</span>
+                        <span id="skills-count" class="skills-count">0</span>
+                    </div>
+                    <div id="skills-container" class="skills-container"></div>
+                </section>
+
+                <!-- 3 & 4: Score + Risk -->
+                <div class="dash-row-2">
+                    <section id="score-section" class="dash-card">
+                        <div class="dash-card-title">
+                            <span><span class="section-num">03</span> Resume Score</span>
+                        </div>
+                        <div class="score-dashboard">
+                            <div class="score-ring-wrap">
+                                <svg class="score-ring" viewBox="0 0 120 120">
+                                    <circle class="score-ring-bg" cx="60" cy="60" r="52" />
+                                    <circle id="score-ring-fill" class="score-ring-fill" cx="60" cy="60" r="52"
+                                        stroke-dasharray="326.73" stroke-dashoffset="326.73" />
+                                </svg>
+                                <div class="score-value-wrap">
+                                    <span id="score-value" class="score-value">0</span>
+                                    <span class="score-max">/100</span>
+                                </div>
+                            </div>
+                            <div class="score-info">
+                                <span id="score-level" class="score-level-badge">—</span>
+                                <p id="score-reason" class="score-reason"></p>
+                                <div class="score-breakdown">
+                                    <div class="breakdown-item"><span class="breakdown-label">Skill Score</span><span
+                                            id="bd-skill" class="breakdown-val">0</span></div>
+                                    <div class="breakdown-item"><span class="breakdown-label">Diversity</span><span
+                                            id="bd-diversity" class="breakdown-val">0</span></div>
+                                    <div class="breakdown-item"><span class="breakdown-label">Skills</span><span
+                                            id="bd-count" class="breakdown-val">0</span></div>
+                                    <div class="breakdown-item"><span class="breakdown-label">Categories</span><span
+                                            id="bd-cats" class="breakdown-val">0</span></div>
+                                </div>
+                                <div class="score-progress-bar-wrap">
+                                    <div class="score-progress-label"><span>Resume Strength</span><span
+                                            id="score-pct-label">0%</span></div>
+                                    <div class="score-progress-track">
+                                        <div id="score-progress-fill" class="score-progress-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="strength-meter" class="strength-meter" style="display:none"></div>
+
+                    <section id="risk-section" class="dash-card">
+                        <div class="dash-card-title">
+                            <span><span class="section-num">04</span> Risk Analysis</span>
+                        </div>
+                        <div id="risk-card" class="risk-card">
+                            <div class="risk-header">
+                                <span id="risk-icon" class="risk-dot risk-medium"></span>
+                                <div>
+                                    <span id="risk-level-badge" class="risk-level-badge">—</span>
+                                    <p class="risk-label">Risk Level</p>
+                                </div>
+                            </div>
+                            <p id="risk-reason" class="risk-reason"></p>
+                            <div id="risk-suggestions">
+                                <p class="risk-suggestions-title"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="var(--accent-warn)" stroke-width="2" width="16" height="16">
+                                        <path d="M12 2a9 9 0 0 0 0 18h0a9 9 0 0 0 0-18z" />
+                                        <line x1="12" y1="8" x2="12" y2="12" />
+                                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                                    </svg> Suggestions</p>
+                                <ul id="risk-suggestions-list"></ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 5. Career Trajectory -->
+                <section id="career-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">05</span> Career Trajectory</span>
+                    </div>
+                    <div id="career-container" class="career-container"></div>
+                </section>
+
+                <!-- 6. Skill Gap Analysis -->
+                <section id="gap-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">06</span> Skill Gap Analysis</span>
+                        <span class="dash-tag">Explainable AI</span>
+                    </div>
+                    <div class="gap-content">
+                        <div class="gap-target">
+                            <span id="gap-icon" class="gap-target-icon"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2" width="24" height="24">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="12" r="6" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg></span>
+                            <div>
+                                <p class="gap-target-label">Best Matched Role</p>
+                                <h3 id="gap-role" class="gap-target-role">—</h3>
+                            </div>
+                            <div class="gap-progress-wrap">
+                                <div class="gap-progress-track">
+                                    <div id="gap-progress-fill" class="gap-progress-fill"></div>
+                                </div>
+                                <span id="gap-pct" class="gap-pct">0% gap</span>
+                            </div>
+                        </div>
+                        <p id="gap-summary" class="gap-summary"></p>
+                        <div class="gap-group">
+                            <p class="gap-group-title"><span class="risk-dot risk-high"
+                                    style="width:10px;height:10px"></span> Missing Skills <span id="gap-missing-count"
+                                    class="gap-group-count">0</span></p>
+                            <div id="gap-missing-list" class="gap-list"></div>
+                        </div>
+                        <div class="gap-group">
+                            <p class="gap-group-title"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-warn)"
+                                    stroke-width="2" width="14" height="14">
+                                    <path d="M12 2a9 9 0 0 0 0 18h0a9 9 0 0 0 0-18z" />
+                                    <line x1="12" y1="8" x2="12" y2="12" />
+                                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                                </svg> Recommended <span id="gap-rec-count" class="gap-group-count">0</span></p>
+                            <div id="gap-rec-list" class="gap-list"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. AI Explainability -->
+                <section id="xai-section" class="dash-card hidden">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">07</span> AI Explainability</span>
+                        <span class="dash-tag"
+                            style="background:rgba(108,99,255,.12);color:var(--accent-secondary);border-color:rgba(108,99,255,.3)">Explainable
+                            AI</span>
+                    </div>
+                    <p class="section-desc" style="margin-bottom:16px">Transparent reasoning behind every AI decision —
+                        understand <em>why</em>, not just <em>what</em>.</p>
+                    <div id="xai-container" style="display:flex;flex-direction:column;gap:14px"></div>
+                </section>
+
+                <!-- 8. Evolution Simulator -->
+                <section id="sim-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">08</span> Resume Evolution</span>
+                        <span class="dash-tag">Digital Twin</span>
+                    </div>
+                    <p class="section-desc" style="margin-bottom:16px">Simulate adding a new skill and see how your
+                        profile improves.</p>
+                    <div class="sim-controls">
+                        <select id="sim-skill-select" class="sim-select">
+                            <option value="">— Select a skill to add —</option>
+                        </select>
+                        <button id="sim-btn" class="btn btn-primary sim-btn" disabled>Simulate</button>
+                    </div>
+                    <div id="sim-result" class="sim-result hidden">
+                        <p id="sim-explanation" class="sim-explanation"></p>
+                        <div class="sim-compare">
+                            <div class="sim-col sim-before">
+                                <span class="sim-col-label">Before</span>
+                                <div class="sim-metric"><span class="sim-metric-label">Score</span><span
+                                        id="sim-before-score" class="sim-metric-val">0</span></div>
+                                <div class="sim-metric"><span class="sim-metric-label">Level</span><span
+                                        id="sim-before-level" class="sim-metric-val">—</span></div>
+                                <div class="sim-metric"><span class="sim-metric-label">Risk</span><span
+                                        id="sim-before-risk" class="sim-metric-val">—</span></div>
+                                <div class="sim-metric"><span class="sim-metric-label">Roles</span><span
+                                        id="sim-before-careers" class="sim-metric-val">0</span></div>
+                            </div>
+                            <div class="sim-arrow">&rarr;</div>
+                            <div class="sim-col sim-after">
+                                <span class="sim-col-label">After</span>
+                                <div class="sim-metric"><span class="sim-metric-label">Score</span><span
+                                        id="sim-after-score" class="sim-metric-val">0</span></div>
+                                <div class="sim-metric"><span class="sim-metric-label">Level</span><span
+                                        id="sim-after-level" class="sim-metric-val">—</span></div>
+                                <div class="sim-metric"><span class="sim-metric-label">Risk</span><span
+                                        id="sim-after-risk" class="sim-metric-val">—</span></div>
+                                <div class="sim-metric"><span class="sim-metric-label">Roles</span><span
+                                        id="sim-after-careers" class="sim-metric-val">0</span></div>
+                            </div>
+                        </div>
+                        <div id="sim-new-roles" class="sim-new-roles"></div>
+                    </div>
+                </section>
+
+                <!-- 9. Score Trend -->
+                <section id="trend-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">09</span> Score Trend</span>
+                        <span class="dash-tag">Analytics</span>
+                    </div>
+                    <p class="section-desc" style="margin-bottom:12px">Projected score growth based on your current
+                        profile trajectory.</p>
+                    <div style="position:relative;height:220px"><canvas id="scoreTrendChart"></canvas></div>
+                </section>
+
+                <!-- 10. Skill Profile / Competency -->
+                <div class="dash-row-2">
+                    <section id="profile-section" class="dash-card">
+                        <div class="dash-card-title">
+                            <span><span class="section-num">10</span> Skill Profile</span>
+                        </div>
+                        <div style="position:relative;height:260px"><canvas id="skillProfileChart"></canvas></div>
+                    </section>
+
+                    <!-- 11. Industry Benchmark -->
+                    <section id="benchmark-section" class="dash-card">
+                        <div class="dash-card-title">
+                            <span><span class="section-num">11</span> Industry Benchmark</span>
+                        </div>
+                        <p class="section-desc" style="margin-bottom:12px">How you compare to industry standards.</p>
+                        <div style="position:relative;height:220px"><canvas id="benchmarkChart"></canvas></div>
+                    </section>
+                </div>
+
+                <!-- 12. Career Path Timeline -->
+                <section id="timeline-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">12</span> Career Path Timeline</span>
+                        <span class="dash-tag">5-Year</span>
+                    </div>
+                    <div id="career-timeline" class="career-timeline"></div>
+                </section>
+
+                <!-- 13. Salary Projection -->
+                <section id="salary-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">13</span> Salary Projection</span>
+                        <span class="dash-tag">Estimate</span>
+                    </div>
+                    <p class="section-desc" style="margin-bottom:12px">Estimated salary growth based on your skill
+                        level.</p>
+                    <div style="position:relative;height:220px"><canvas id="salaryChart"></canvas></div>
+                </section>
+
+                <!-- 14. Improvement Suggestions -->
+                <section id="improve-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">14</span> Improvement Suggestions</span>
+                        <span class="dash-tag">+% Impact</span>
+                    </div>
+                    <p class="section-desc" style="margin-bottom:12px">Skills that would boost your score the most.</p>
+                    <div id="improve-container" class="improve-container"></div>
+                </section>
+
+                <!-- 15. Learning Path -->
+                <section id="learn-section" class="dash-card">
+                    <div class="dash-card-title">
+                        <span><span class="section-num">15</span> Learning Path</span>
+                    </div>
+                    <p class="section-desc" style="margin-bottom:12px">Recommended resources to close your skill gaps.
+                    </p>
+                    <div id="learn-container" class="learn-container"></div>
+                </section>
+
+            </div><!-- end dashboard -->
+
+            <!-- Features -->
+            <section id="features-section" class="features" style="margin-top:60px">
+                <h2 class="features-heading">Key <span class="gradient-text">Features</span></h2>
+                <div class="features-grid">
+                    <div class="feature-card" style="--delay:0s">
+                        <div class="feature-icon-wrap"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                </svg></span></div>
+                        <h3>Resume Parsing</h3>
+                        <p>Upload PDF and get text extracted automatically using AI-powered parsing.</p>
+                    </div>
+                    <div class="feature-card" style="--delay:.08s">
+                        <div class="feature-icon-wrap"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="12" r="6" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg></span></div>
+                        <h3>Skill Mining</h3>
+                        <p>Detect technical and soft skills with keyword-based text mining.</p>
+                    </div>
+                    <div class="feature-card" style="--delay:.16s">
+                        <div class="feature-icon-wrap"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10" />
+                                    <line x1="12" y1="20" x2="12" y2="4" />
+                                    <line x1="6" y1="20" x2="6" y2="14" />
+                                </svg></span></div>
+                        <h3>Scoring & Risk</h3>
+                        <p>Get a score out of 100 with explainable risk analysis.</p>
+                    </div>
+                    <div class="feature-card" style="--delay:.24s">
+                        <div class="feature-icon-wrap"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2">
+                                    <path d="M22 12A10 10 0 1 1 12 2" />
+                                    <path d="M22 2L12 12" />
+                                    <path d="M16 2h6v6" />
+                                </svg></span></div>
+                        <h3>Career Prediction</h3>
+                        <p>See matched career paths with match percentages.</p>
+                    </div>
+                    <div class="feature-card" style="--delay:.32s">
+                        <div class="feature-icon-wrap"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg></span></div>
+                        <h3>Digital Twin</h3>
+                        <p>Simulate skill upgrades and preview career improvements.</p>
+                    </div>
+                    <div class="feature-card" style="--delay:.4s">
+                        <div class="feature-icon-wrap"><span class="icon-svg"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--accent)" stroke-width="2">
+                                    <path d="M12 2a9 9 0 0 0 0 18h0a9 9 0 0 0 0-18z" />
+                                    <path d="M12 8v4" />
+                                    <path d="M12 16h.01" />
+                                </svg></span></div>
+                        <h3>Explainable AI</h3>
+                        <p>Every result comes with a clear explanation.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

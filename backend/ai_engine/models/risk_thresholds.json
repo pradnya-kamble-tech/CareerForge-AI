@@ -1,0 +1,7 @@
+{
+  "low_max": 30,
+  "medium_max": 60,
+  "score_weight": 0.5,
+  "skill_weight": 0.25,
+  "completeness_weight": 0.25
+}

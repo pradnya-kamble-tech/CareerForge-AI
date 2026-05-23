@@ -1,0 +1,95 @@
+2026-05-23 12:24:49 | INFO    | CareerForge AI server starting up...
+2026-05-23 12:24:49 | INFO    | SQLite database initialised.
+test_01_empty_pdf (__main__.TestCareerForgeAI_QA)
+Edge Case 1: Empty PDF should be caught by content validator. ... 2026-05-23 12:24:49 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+2026-05-23 12:24:49 | INFO    | Student resume uploaded: 188dfc8f_empty.pdf (user=testqa@careerforge.com)
+2026-05-23 12:24:49 | WARNING | Rejected non-resume PDF: 188dfc8f_empty.pdf
+ok
+test_02_non_pdf_file (__main__.TestCareerForgeAI_QA)
+Edge Case 2: Extension validation. ... 2026-05-23 12:24:49 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+2026-05-23 12:24:49 | WARNING | Invalid file type rejected: text.txt (user=testqa@careerforge.com)
+FAIL
+test_03_no_file (__main__.TestCareerForgeAI_QA)
+Edge Case 3: No file part. ... 2026-05-23 12:24:49 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_04_ai_demo_flow (__main__.TestCareerForgeAI_QA)
+Validate AI logic end-to-end using the demo-data endpoint (simulates perfect resume). ... 2026-05-23 12:24:49 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+2026-05-23 12:24:54 | INFO    | Demo mode analysis served (id=af530b16d5cf4970b0b509be7b300bcc)
+FAIL
+test_05_digital_twin (__main__.TestCareerForgeAI_QA)
+Digital Twin edge case simulation — both Format A and Format B. ... 2026-05-23 12:24:54 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_06_role_knowledge_teacher (__main__.TestCareerForgeAI_QA)
+TASK 7 – Teacher: role knowledge returns relevant skills, gap is non-empty. ... 2026-05-23 12:24:59 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ERROR
+test_07_role_knowledge_hr (__main__.TestCareerForgeAI_QA)
+TASK 7 – HR: role knowledge returns relevant skills, gap is role-specific. ... 2026-05-23 12:24:59 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ERROR
+test_08_role_knowledge_engineering (__main__.TestCareerForgeAI_QA)
+TASK 7 – Engineering: role knowledge returns relevant skills, score is non-zero. ... 2026-05-23 12:24:59 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_09_simulator_format_a (__main__.TestCareerForgeAI_QA)
+Simulator Format A: extracted_text + added_skill (frontend format). ... 2026-05-23 12:24:59 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ok
+test_10_skill_gap_never_empty (__main__.TestCareerForgeAI_QA)
+Skill gap should NEVER be empty, even for unknown roles. ... 2026-05-23 12:24:59 | INFO    | User logged in: testqa@careerforge.com (role=Student)
+ERROR
+
+======================================================================
+ERROR: test_06_role_knowledge_teacher (__main__.TestCareerForgeAI_QA)
+TASK 7 – Teacher: role knowledge returns relevant skills, gap is non-empty.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "qa_test_harness.py", line 108, in test_06_role_knowledge_teacher
+    assert len(gap["missing"]) > 0, "Skill gap missing list is empty for Teacher with no skills."
+KeyError: 'missing'
+
+======================================================================
+ERROR: test_07_role_knowledge_hr (__main__.TestCareerForgeAI_QA)
+TASK 7 – HR: role knowledge returns relevant skills, gap is role-specific.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "qa_test_harness.py", line 135, in test_07_role_knowledge_hr
+    assert len(gap["missing"]) > 0, "Skill gap missing list is empty for HR with minimal skills."
+KeyError: 'missing'
+
+======================================================================
+ERROR: test_10_skill_gap_never_empty (__main__.TestCareerForgeAI_QA)
+Skill gap should NEVER be empty, even for unknown roles.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "qa_test_harness.py", line 205, in test_10_skill_gap_never_empty
+    assert len(gap["missing"]) > 0, "Skill gap returned empty for unknown role — fallback broken."
+KeyError: 'missing'
+
+======================================================================
+FAIL: test_02_non_pdf_file (__main__.TestCareerForgeAI_QA)
+Edge Case 2: Extension validation.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "qa_test_harness.py", line 43, in test_02_non_pdf_file
+    assert "Only valid PDF files are allowed" in json_resp["message"]
+AssertionError
+
+======================================================================
+FAIL: test_04_ai_demo_flow (__main__.TestCareerForgeAI_QA)
+Validate AI logic end-to-end using the demo-data endpoint (simulates perfect resume).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "qa_test_harness.py", line 58, in test_04_ai_demo_flow
+    assert "role" in json_resp
+AssertionError
+
+----------------------------------------------------------------------
+Ran 10 tests in 10.739s
+
+FAILED (failures=2, errors=3)
+✅ SQLite database initialised.
+✅ SQLite database initialised.
+
+[Engineering] top_skills: ['Training', 'Communication', 'Leadership', 'Project Management', 'Excel']
+[Engineering] score: 66
+[Engineering] role_profile: ['Training', 'Communication', 'Leadership', 'Project Management', 'Excel']
+[Engineering] skill_gap.missing: []
+
+[Simulator Format A] score_change=3, role=Hybrid (BUSINESS-DEVELOPMENT / ENGINEERING)

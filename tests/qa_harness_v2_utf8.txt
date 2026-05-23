@@ -1,0 +1,313 @@
+﻿python : 2026-05-23 
+15:50:37 | INFO    | 
+CareerForge AI server 
+starting up...
+At line:1 char:28
++ ... ="backend"; 
+python tests/qa_test_ha
+rness.py > tests/qa_tes
+t_harness_o ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (2026-05-23 15   
+ :5... starting up.    
+..:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+2026-05-23 15:50:37 | 
+INFO    | SQLAlchemy, 
+Migrate, JWT and 
+Limiter initialised.
+2026-05-23 15:50:37 | 
+INFO    | Database 
+tables created.
+test_01_empty_pdf (__ma
+in__.TestCareerForgeAI_
+QA)
+Edge Case 1: Empty PDF 
+should be caught by 
+content validator. ... 
+FAIL
+test_02_non_pdf_file (_
+_main__.TestCareerForge
+AI_QA)
+Edge Case 2: Extension 
+validation. ... FAIL
+test_03_no_file (__main
+__.TestCareerForgeAI_QA
+)
+Edge Case 3: No file 
+part. ... FAIL
+test_04_ai_demo_flow (_
+_main__.TestCareerForge
+AI_QA)
+Validate AI logic 
+end-to-end using the 
+demo-data endpoint 
+(simulates perfect 
+resume). ... 
+2026-05-23 15:50:38 | 
+ERROR   | Demo data 
+generation failed: You 
+must call 
+`@jwt_required()` or `v
+erify_jwt_in_request()`
+ before using this 
+method
+FAIL
+test_05_digital_twin (_
+_main__.TestCareerForge
+AI_QA)
+Digital Twin edge case 
+simulation ù both 
+Format A and Format B. 
+... FAIL
+test_06_role_knowledge_
+teacher (__main__.TestC
+areerForgeAI_QA)
+TASK 7 û Teacher: role 
+knowledge returns 
+relevant skills, gap 
+is non-empty. ... ok
+test_07_role_knowledge_
+hr (__main__.TestCareer
+ForgeAI_QA)
+TASK 7 û HR: role 
+knowledge returns 
+relevant skills, gap 
+is role-specific. ... 
+ok
+test_08_role_knowledge_
+engineering (__main__.T
+estCareerForgeAI_QA)
+TASK 7 û Engineering: 
+role knowledge returns 
+relevant skills, score 
+is non-zero. ... ERROR
+test_09_simulator_forma
+t_a (__main__.TestCaree
+rForgeAI_QA)
+Simulator Format A: 
+extracted_text + 
+added_skill (frontend 
+format). ... FAIL
+test_10_skill_gap_never
+_empty (__main__.TestCa
+reerForgeAI_QA)
+Skill gap should NEVER 
+be empty, even for 
+unknown roles. ... ok
+
+=======================
+=======================
+=======================
+=
+ERROR: test_08_role_kno
+wledge_engineering (__m
+ain__.TestCareerForgeAI
+_QA)
+TASK 7 û Engineering: 
+role knowledge returns 
+relevant skills, score 
+is non-zero.
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 143, 
+in test_08_role_knowled
+ge_engineering
+    from analyzer 
+import 
+analyze_resume_ai
+ImportError: cannot 
+import name 
+'analyze_resume_ai' 
+from 'analyzer' (C:\Use
+rs\Shuddhodhan\.gemini\
+antigravity\scratch\car
+eerforge 2- Copy - Copy
+\careerforge\backend\an
+alyzer.py)
+
+=======================
+=======================
+=======================
+=
+FAIL: 
+test_01_empty_pdf (__ma
+in__.TestCareerForgeAI_
+QA)
+Edge Case 1: Empty PDF 
+should be caught by 
+content validator.
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 34, 
+in test_01_empty_pdf
+    assert 
+response.status_code 
+== 400
+AssertionError
+
+=======================
+=======================
+=======================
+=
+FAIL: 
+test_02_non_pdf_file (_
+_main__.TestCareerForge
+AI_QA)
+Edge Case 2: Extension 
+validation.
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 42, 
+in test_02_non_pdf_file
+    assert 
+response.status_code 
+== 400
+AssertionError
+
+=======================
+=======================
+=======================
+=
+FAIL: test_03_no_file (
+__main__.TestCareerForg
+eAI_QA)
+Edge Case 3: No file 
+part.
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 49, 
+in test_03_no_file
+    assert 
+response.status_code 
+== 400
+AssertionError
+
+=======================
+=======================
+=======================
+=
+FAIL: 
+test_04_ai_demo_flow (_
+_main__.TestCareerForge
+AI_QA)
+Validate AI logic 
+end-to-end using the 
+demo-data endpoint 
+(simulates perfect 
+resume).
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 56, 
+in test_04_ai_demo_flow
+    assert 
+response.status_code 
+== 200
+AssertionError
+
+=======================
+=======================
+=======================
+=
+FAIL: 
+test_05_digital_twin (_
+_main__.TestCareerForge
+AI_QA)
+Digital Twin edge case 
+simulation ù both 
+Format A and Format B.
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 79, 
+in test_05_digital_twin
+    assert 
+response.status_code 
+== 200, f"Expected 
+200, got {response.stat
+us_code}: {rj}"
+AssertionError: 
+Expected 200, got 302: 
+None
+
+=======================
+=======================
+=======================
+=
+FAIL: test_09_simulator
+_format_a (__main__.Tes
+tCareerForgeAI_QA)
+Simulator Format A: 
+extracted_text + 
+added_skill (frontend 
+format).
+-----------------------
+-----------------------
+-----------------------
+-
+Traceback (most recent 
+call last):
+  File "tests/qa_test_h
+arness.py", line 193, 
+in test_09_simulator_fo
+rmat_a
+    assert 
+response.status_code 
+== 200, f"Simulate 
+Format A failed: {rj}"
+AssertionError: 
+Simulate Format A 
+failed: None
+
+-----------------------
+-----------------------
+-----------------------
+-
+Ran 10 tests in 0.577s
+
+FAILED (failures=6, 
+errors=1)
+
+[Teacher] top_skills: ['Teaching', 'Training', 'Communication', 'Leadership', 'Writing']
+[Teacher] skill_gap (empty resume): [{'skill': 'Teaching', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Training', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Communication', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Leadership', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}, {'skill': 'Writing', 'reason': 'Required for Teacher profiles.', 'priority': 'High'}]
+
+[HR] top_skills: ['Training', 'Compensation', 'Employee Relations', 'Communication', 'Recruitment']
+[HR] skill_gap (partial): [{'skill': 'Training', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Compensation', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Employee Relations', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Recruitment', 'reason': 'Required for Hr profiles.', 'priority': 'High'}, {'skill': 'Compliance', 'reason': 'Required for Hr profiles.', 'priority': 'Medium'}]

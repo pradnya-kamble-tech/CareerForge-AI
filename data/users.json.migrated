@@ -1,0 +1,38 @@
+{
+  "test@student.com": {
+    "password": "pass123",
+    "role": "Student"
+  },
+  "recruiter@careerforge.com": {
+    "password": "admin123",
+    "role": "Recruiter"
+  },
+  "admin@careerforge.com": {
+    "password": "admin123",
+    "role": "Admin"
+  },
+  "pradnyark377@gmail.com": {
+    "password": "kA2pi.-Nj9xXqS5",
+    "role": "Student"
+  },
+  "newtest@student.com": {
+    "password": "test123",
+    "role": "Student"
+  },
+  "debugtest@test.com": {
+    "password": "test123",
+    "role": "Student"
+  },
+  "recruiter@test.com": {
+    "password": "test123",
+    "role": "Recruiter"
+  },
+  "admin@test.com": {
+    "password": "test123",
+    "role": "Admin"
+  },
+  "admin2@test.com": {
+    "password": "admin123",
+    "role": "Admin"
+  }
+}

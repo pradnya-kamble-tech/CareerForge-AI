@@ -1,0 +1,440 @@
+# 🧪 CareerForge AI V2 — Model Training, Evaluation & Validation Strategy
+
+## Complete ML Quality Assurance Blueprint
+
+> **Purpose**: Define EXACTLY what to train, measure, compare, and decide
+> **No code, no theory** — only specifications, targets, and decision criteria
+
+---
+
+## 📌 TASK 1 — Data Splitting Strategy
+
+| Split | Percentage | Size (~2,484 total) | Purpose |
+|-------|-----------|--------------------|---------| 
+| **Training** | 70% | ~1,739 resumes | Model learning |
+| **Validation** | 15% | ~373 resumes | Hyperparameter tuning, early stopping |
+| **Test** | 15% | ~372 resumes | Final unbiased evaluation |
+
+### Split Requirements
+
+| Requirement | What It Means |
+|------------|---------------|
+| **Stratified Split** | Each split maintains the same role distribution as the full dataset |
+| **No Data Leakage** | Test set is NEVER seen during training or tuning |
+| **Reproducible** | Fixed random seed so results are repeatable |
+| **Per-Class Balance** | Each of the 25 roles has proportional representation in every split |
+
+### Expected Per-Role Count (Post-Split)
+
+| Role | Training (~70%) | Validation (~15%) | Test (~15%) |
+|------|-----------------|-------------------|-------------|
+| Each of 25 roles (~96 each) | ~67 | ~14 | ~15 |
+
+---
+
+## 📌 TASK 2 — Train Role Classification Models
+
+### Models to Train
+
+| # | Model | Why This Model |
+|---|-------|---------------|
+| 1 | **Multinomial Naive Bayes** | Fast text classification baseline; handles sparse TF-IDF well |
+| 2 | **Logistic Regression** | Strong linear model; outputs calibrated probabilities |
+| 3 | **Random Forest** | Non-linear; captures feature interactions; robust to noise |
+
+### Training Configuration
+
+| Parameter | Specification |
+|-----------|--------------|
+| **Input** | TF-IDF feature vectors from Module 3 |
+| **Labels** | 25 role categories (encoded 0–24) |
+| **Training Set** | 70% of dataset (stratified) |
+| **Validation** | 15% for hyperparameter tuning |
+| **Cross-Validation** | 5-fold stratified on training set |
+
+---
+
+## 📌 TASK 3 — Model Comparison
+
+### Metrics to Compute (for EACH model)
+
+| Metric | What It Measures | Target |
+|--------|-----------------|--------|
+| **Accuracy** | Overall correct predictions / total | ≥ 85% |
+| **Precision** (macro) | Avg precision across all 25 classes | ≥ 80% |
+| **Recall** (macro) | Avg recall across all 25 classes | ≥ 80% |
+| **F1-Score** (macro) | Harmonic mean of precision & recall | ≥ 80% |
+| **F1-Score** (weighted) | Class-size weighted F1 | ≥ 85% |
+
+### Comparison Table Template
+
+| Model | Accuracy | Precision | Recall | F1 (macro) | F1 (weighted) | Training Time |
+|-------|----------|-----------|--------|------------|---------------|---------------|
+| Naive Bayes | ? | ? | ? | ? | ? | ? |
+| Logistic Regression | ? | ? | ? | ? | ? | ? |
+| Random Forest | ? | ? | ? | ? | ? | ? |
+
+### Decision Rule
+
+```
+IF F1(weighted) difference < 2% between models:
+  → SELECT the one with better macro F1 (handles minority classes better)
+ELSE:
+  → SELECT the one with highest F1(weighted)
+
+TIE-BREAKER: Faster training time wins
+```
+
+---
+
+## 📌 TASK 4 — Confusion Matrix Analysis
+
+### What to Analyze
+
+| Analysis | What to Look For |
+|----------|-----------------|
+| **Highly Confused Pairs** | Which two roles get misclassified as each other most often? |
+| **Weak Classes** | Roles with precision OR recall below 70% |
+| **Strong Classes** | Roles with F1 > 90% (easiest to classify) |
+| **Asymmetric Confusion** | Role A misclassified as B, but NOT B as A |
+
+### Expected Problem Areas
+
+| Potentially Confused Roles | Reason |
+|---------------------------|--------|
+| HR ↔ BPO | Overlapping organizational/people skills |
+| Sales ↔ Business-Development | Similar business vocabulary |
+| Finance ↔ Banking ↔ Accountant | Shared financial domain language |
+| Engineering ↔ Information-Technology | Overlapping technical skills |
+| Designer ↔ Digital-Media | Creative domain overlap |
+
+### Decision Matrix
+
+| Finding | Action |
+|---------|--------|
+| Two roles confused > 20% of the time | Consider merging labels OR adding distinguishing features |
+| A role has recall < 60% | Investigate if the role has too few distinctive features |
+| A role has precision < 60% | Other roles are being falsely labeled as this role — add negative features |
+| Overall accuracy < 80% | Re-evaluate feature extraction (M3) — try different TF-IDF settings |
+
+---
+
+## 📌 TASK 5 — Skill Extraction Validation
+
+### Validation Method
+
+| Test | How to Validate | Pass Condition |
+|------|----------------|----------------|
+| **Coverage Test** | Manually review 20 resumes — are all visible skills extracted? | ≥ 80% of human-identified skills found |
+| **Precision Test** | Are extracted skills actually valid skills? | ≤ 10% false positives |
+| **Categorization Test** | Are skills placed in the correct category? | ≥ 85% correct categorization |
+| **Edge Cases** | Abbreviated skills (ML, NLP, JS), multi-word skills (Machine Learning) | All common abbreviations handled |
+
+### Validation Checklist
+
+| Check | Status |
+|-------|--------|
+| Extracts multi-word skills (e.g., "Machine Learning") | ☐ |
+| Handles abbreviations (e.g., "NLP" → "Natural Language Processing") | ☐ |
+| Differentiates Technical vs. Soft skills correctly | ☐ |
+| Doesn't extract random words as skills | ☐ |
+| Works on resumes from all 25 role categories | ☐ |
+
+### Decision
+
+| Finding | Action |
+|---------|--------|
+| Missing > 20% of skills | Expand skill recognition patterns |
+| Too many false positives | Tighten extraction rules / improve filtering |
+| Category errors > 15% | Retrain/improve categorization logic |
+
+---
+
+## 📌 TASK 6 — Scoring Model Validation
+
+### Consistency Checks
+
+| Test Case | Expected Outcome |
+|-----------|-----------------|
+| Resume with 20+ relevant skills, clear experience | Score > 75 |
+| Resume with 5–10 skills, moderate experience | Score 40–75 |
+| Resume with < 5 skills, no clear experience | Score < 40 |
+| Two similar resumes (same role, similar skills) | Scores within ±10 points |
+| Adding a relevant skill to a resume | Score increases |
+| Resume with skills mismatching predicted role | Lower score than matched resume |
+
+### Distribution Checks
+
+| Check | Expected |
+|-------|----------|
+| Score distribution shape | Roughly normal (bell curve centered around 50–60) |
+| No scores at exactly 0 or exactly 100 | No extreme edge cases |
+| Score spread per role | Each role category has a score range, not a single value |
+| Percentile distribution | 25th/50th/75th percentiles are meaningful and distinct |
+
+### Decision Matrix
+
+| Finding | Action |
+|---------|--------|
+| All scores cluster in narrow range (±15) | Increase scoring sensitivity; adjust dimension weights |
+| High-quality resumes scoring < 50 | Increase weight of valid positive signals |
+| Low-quality resumes scoring > 70 | Add penalties for missing components |
+| Scores not correlated with skill count | Skill relevance weight too low — increase it |
+
+---
+
+## 📌 TASK 7 — Risk Model Validation
+
+### Consistency Checks
+
+| Test Case | Expected Outcome |
+|-----------|-----------------|
+| Resume with score > 80 | Risk: Low (< 30%) |
+| Resume with score 40–60 | Risk: Medium (30–60%) |
+| Resume with score < 40 | Risk: High (> 60%) |
+| Resume with many skills but wrong role | Risk: Medium (misalignment) |
+| Resume with few skills in any role | Risk: High |
+
+### Inverse Correlation Check
+
+| Validation | Expected |
+|-----------|----------|
+| Score vs. Risk correlation | Strong negative correlation (r < −0.7) |
+| High score → Low risk | Consistent across all 25 role categories |
+| Risk factors match score weaknesses | Same dimensions that drag score down should appear as risk factors |
+
+### Decision Matrix
+
+| Finding | Action |
+|---------|--------|
+| Risk doesn't inversely correlate with score | Re-calibrate risk thresholds |
+| Same resumes get "High Risk" and "High Score" | Conflicting logic — fix the scoring or risk model |
+| Risk factors are too generic | Make risk explanations more specific to the resume |
+| All resumes get "Medium Risk" | Threshold ranges too tight — expand Low/High bands |
+
+---
+
+## 📌 TASK 8 — Matching Engine Evaluation
+
+### Test Scenarios
+
+| Scenario | Expected Match % |
+|----------|-----------------|
+| IT resume matched with IT job description | > 70% |
+| IT resume matched with Chef job description | < 30% |
+| Finance resume matched with Banking JD | 50–80% (related but different) |
+| Resume with exact skills mentioned in JD | > 85% |
+| Resume with zero skill overlap | < 15% |
+
+### Quality Checks
+
+| Check | Pass Condition |
+|-------|---------------|
+| Relevant resumes rank higher than irrelevant | Top-5 candidates for a JD should be from matching roles |
+| Match % correlates with skill overlap | Higher skill overlap → higher match % |
+| Semantic similarity captures meaning | "Software Engineer" and "Developer" are matched as similar |
+| Non-matching resumes get low scores | No irrelevant resume gets > 50% match |
+
+---
+
+## 📌 TASK 9 — Overfitting Detection
+
+### Comparison Table
+
+| Metric | Training Set | Validation Set | Test Set | Status |
+|--------|-------------|---------------|----------|--------|
+| Accuracy | ? | ? | ? | ? |
+| F1 (macro) | ? | ? | ? | ? |
+| F1 (weighted) | ? | ? | ? | ? |
+
+### Overfitting Rules
+
+| Condition | Diagnosis | Action |
+|-----------|-----------|--------|
+| Train acc − Val acc > 10% | **Overfitting** | Simplify model / add regularization / reduce features |
+| Train acc − Val acc > 5% | **Mild overfitting** | Monitor; consider regularization |
+| Train acc − Val acc < 5% | **Good fit** | Acceptable |
+| Val acc > Train acc | **Unusual** | Check for data leakage — this shouldn't happen |
+| Test acc ≈ Val acc (±3%) | **Generalization confirmed** | Model is ready |
+| Test acc << Val acc (>5% drop) | **Selection bias** | Re-split data and retrain |
+
+---
+
+## 📌 TASK 10 — Final Model Selection
+
+### Selection Criteria (Weighted)
+
+| Criterion | Weight | Decision Factor |
+|-----------|--------|----------------|
+| **Test F1 (weighted)** | 35% | Primary performance metric |
+| **Test F1 (macro)** | 25% | Performance on minority classes |
+| **No overfitting** | 20% | Train-test gap < 5% |
+| **Inference speed** | 10% | < 500ms per prediction |
+| **Interpretability** | 10% | Feature importance available for XAI |
+
+### Final Decision Template
+
+| Decision | Selected |
+|----------|---------|
+| **Role Classification Model** | [Best of NB/LR/RF] |
+| **Scoring Logic** | [Weighted dimension formula — final weights] |
+| **Risk Thresholds** | Low: [0–X%] / Medium: [X–Y%] / High: [Y–100%] |
+| **Matching Method** | [Embedding similarity + skill overlap] |
+
+---
+
+## 📌 TASK 11 — Model Output Standardization
+
+### Standard Output Format (Every Prediction)
+
+```
+{
+  "resume_id":       "unique-id",
+  "timestamp":       "ISO-8601",
+  "role": {
+    "predicted":     "Information Technology",
+    "confidence":    0.87,
+    "top_3":         [{"role": "...", "probability": 0.87}, ...]
+  },
+  "score": {
+    "total":         72,
+    "level":         "Good",
+    "dimensions":    {"skill_relevance": 85, "experience": 60, ...},
+    "percentile":    68
+  },
+  "risk": {
+    "probability":   0.23,
+    "level":         "Low",
+    "factors":       ["..."],
+    "mitigations":   ["..."]
+  },
+  "skills": {
+    "extracted":     ["Python", "SQL", ...],
+    "categorized":   {"technical": [...], "soft": [...], "tools": [...]},
+    "count":         15
+  },
+  "match": {
+    "percentage":    78,
+    "matching_skills": ["..."],
+    "missing_skills":  ["..."]
+  },
+  "explanation": {
+    "role_reason":   "...",
+    "score_reason":  "...",
+    "risk_reason":   "..."
+  }
+}
+```
+
+---
+
+## 📌 TASK 12 — Model Persistence
+
+### What to Save
+
+| Artifact | Format | Purpose |
+|----------|--------|---------|
+| Trained classification model | `.pkl` / `.joblib` | Role prediction at inference time |
+| TF-IDF vectorizer | `.pkl` / `.joblib` | Transform new resumes to features |
+| Label encoder | `.pkl` / `.joblib` | Map predictions back to role names |
+| Scoring weights | [.json](file:///c:/Users/Shuddhodhan/.gemini/antigravity/scratch/careerforge%202-%20Copy/package.json) | Resume scoring dimension weights |
+| Risk thresholds | [.json](file:///c:/Users/Shuddhodhan/.gemini/antigravity/scratch/careerforge%202-%20Copy/package.json) | Low/Medium/High cutoff values |
+| Skill database | [.json](file:///c:/Users/Shuddhodhan/.gemini/antigravity/scratch/careerforge%202-%20Copy/package.json) | Expanded AI-learned skill map |
+| Performance report | [.json](file:///c:/Users/Shuddhodhan/.gemini/antigravity/scratch/careerforge%202-%20Copy/package.json) | All evaluation metrics for audit |
+
+### Model Versioning
+
+| Field | Purpose |
+|-------|---------|
+| `model_version` | Incrementing version number |
+| `trained_date` | Timestamp of training |
+| `dataset_hash` | Hash of training data for reproducibility |
+| `performance_metrics` | Accuracy, F1, etc. at time of training |
+
+---
+
+## 📌 TASK 13 — Performance Targets
+
+### Hard Targets (Must Achieve)
+
+| Metric | Target | Acceptable Minimum |
+|--------|--------|-------------------|
+| Role classification accuracy | ≥ 85% | ≥ 80% |
+| Role F1 (weighted) | ≥ 85% | ≥ 80% |
+| Skill extraction relevance | ≥ 80% | ≥ 75% |
+| Score consistency (similar resumes) | ±10 pts | ±15 pts |
+| Risk-score inverse correlation | r < −0.7 | r < −0.5 |
+| Single resume processing time | < 3 sec | < 5 sec |
+| Model file size (total) | < 100 MB | < 200 MB |
+
+### Stretch Targets (Ideal)
+
+| Metric | Stretch Target |
+|--------|---------------|
+| Role classification accuracy | ≥ 90% |
+| Role F1 (macro) | ≥ 85% |
+| Skill extraction precision | ≥ 95% |
+| Resume processing time | < 1 sec |
+
+---
+
+## 📌 TASK 14 — Failure Case Analysis
+
+### Failure Types to Identify
+
+| Failure Type | Example | Impact |
+|-------------|---------|--------|
+| **Role Misclassification** | Finance resume predicted as Accountant | Wrong career path suggestions |
+| **Skill Miss** | "Machine Learning" not extracted | Lower score, wrong gap analysis |
+| **False Skill** | Random word extracted as skill | Inflated score, wrong matching |
+| **Score Outlier** | Weak resume scores 90 | Misleading quality signal |
+| **Risk Contradiction** | Score 85 but Risk "High" | User confusion, lost trust |
+| **Match Failure** | IT resume matches Chef JD at 60% | Recruiter gets irrelevant candidates |
+
+### Analysis Protocol
+
+| Step | What to Do |
+|------|-----------|
+| 1 | Collect all test-set predictions |
+| 2 | Filter for incorrect/inconsistent outputs |
+| 3 | Group failures by type (misclassification, score outlier, etc.) |
+| 4 | Identify common patterns in failures |
+| 5 | Determine if failures are feature-related, data-related, or model-related |
+| 6 | Prioritize fixes by impact (how many users would be affected) |
+
+---
+
+## 📌 TASK 15 — Final Validation Checklist
+
+| # | Validation Check | Status |
+|---|-----------------|--------|
+| 1 | Model accuracy ≥ 85% on test set | ☐ |
+| 2 | No overfitting (train-test gap < 5%) | ☐ |
+| 3 | F1 macro ≥ 80% (minority classes handled) | ☐ |
+| 4 | Confusion matrix reviewed — no critical misclassifications | ☐ |
+| 5 | Skill extraction validated on 20+ resumes | ☐ |
+| 6 | Scoring logic produces reasonable distribution | ☐ |
+| 7 | Risk inversely correlates with score | ☐ |
+| 8 | Matching engine produces correct rankings | ☐ |
+| 9 | All models saved and versioned | ☐ |
+| 10 | Output format standardized and consistent | ☐ |
+| 11 | Processing time < 3 seconds per resume | ☐ |
+| 12 | Works on unseen resumes (not from training data) | ☐ |
+| 13 | Explanations are coherent and accurate | ☐ |
+| 14 | Failure cases documented and analyzed | ☐ |
+| 15 | Performance report generated and saved | ☐ |
+
+---
+
+## 🎯 Summary: What This Produces
+
+| Deliverable | Status After Completion |
+|------------|----------------------|
+| **Trained Role Classifier** | Best model selected, evaluated, saved |
+| **Validated Scoring Model** | Consistent, reasonable scores |
+| **Calibrated Risk Model** | Inversely correlated with score |
+| **Tested Matching Engine** | Correct rankings confirmed |
+| **Skill Extractor** | Validated against human review |
+| **Performance Report** | All metrics documented |
+| **Model Files** | Serialized and ready for backend integration |
+| **Failure Analysis** | Edge cases identified and documented |

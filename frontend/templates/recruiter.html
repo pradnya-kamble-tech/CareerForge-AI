@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+{% from 'components/_eva_loader.html' import cf_eva_loader %}
+{% from 'components/_polygon_loader.html' import cf_polygon_loader %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CareerForge AI – Recruiter Dashboard" />
+    <title>Recruiter Dashboard – CareerForge AI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/uiverse-components.css" />
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="grain-overlay"></div>
+
+    {{ cf_eva_loader() }}
+    {{ cf_polygon_loader() }}
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo"><span class="bolt"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+                        stroke-width="2.5" width="18" height="18">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg></span> CareerForge</div>
+            <nav class="sidebar-nav">
+                <a href="/student" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <rect x="3" y="3" width="7" height="7" rx="1" />
+                            <rect x="14" y="3" width="7" height="7" rx="1" />
+                            <rect x="3" y="14" width="7" height="7" rx="1" />
+                            <rect x="14" y="14" width="7" height="7" rx="1" />
+                        </svg></span> Student</a>
+                <a href="/recruiter" class="sidebar-link active"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg></span> Recruiter</a>
+                <a href="/recruiter-results" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg></span> Results</a>
+                {% if role == 'Admin' %}
+                <a href="/admin" class="sidebar-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" width="18" height="18">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg></span> Admin</a>
+                {% endif %}
+            </nav>
+            <div class="sidebar-footer">
+                <span class="sidebar-role">{{ role }}</span>
+                <span class="sidebar-user">{{ user }}</span>
+                <a href="/logout" class="sidebar-logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" width="16" height="16">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h2 style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:6px">
+                Recruiter <span class="gradient-text">Dashboard</span>
+            </h2>
+            <p class="section-desc" style="margin-bottom:32px">Upload multiple PDF resumes. Each will be analysed and
+                ranked automatically.</p>
+
+            <form action="/recruiter-upload" method="POST" enctype="multipart/form-data">
+                <div class="upload-zone" id="drop-zone" onclick="document.getElementById('resumes-input').click()">
+                    <div class="upload-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)"
+                            stroke-width="1.5" width="48" height="48">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                            <line x1="12" y1="11" x2="12" y2="17" />
+                            <polyline points="9 14 12 11 15 14" />
+                        </svg></div>
+                    <p class="upload-label">Drag & drop PDF resumes here</p>
+                    <p class="upload-hint">or click to browse — select multiple files</p>
+                </div>
+                <input type="file" id="resumes-input" name="resumes" accept=".pdf" multiple hidden />
+                <ul class="file-list" id="file-list"></ul>
+                <button type="submit" class="btn btn-primary" id="upload-btn" style="width:100%;margin-top:12px"
+                    disabled>Upload & Analyse</button>
+            </form>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="result-banner {{ category }}">{{ message }}</div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            {% if candidates %}
+            <h2 style="font-family:var(--font-display);font-size:1.4rem;margin:40px 0 24px;text-align:center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" width="22" height="22"
+                    style="vertical-align:-4px">
+                    <path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" />
+                </svg>
+                Ranked <span class="gradient-text">Results</span>
+            </h2>
+
+            {% for c in candidates %}
+            <div class="candidate-card {% if c.rank == 1 %}top-candidate{% endif %}"
+                style="animation-delay: {{ loop.index0 * 0.08 }}s">
+                <div class="candidate-header">
+                    <span class="candidate-name">
+                        <span
+                            class="rank-badge {% if c.rank == 1 %}rank-1{% elif c.rank == 2 %}rank-2{% elif c.rank == 3 %}rank-3{% else %}rank-default{% endif %}">
+                            #{{ c.rank }}
+                        </span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16" style="vertical-align:-2px">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                        {{ c.filename }}
+                        <span class="file-size" style="color:var(--text-muted);font-weight:400;font-size:.78rem">({{
+                            c.size_kb }} KB)</span>
+                        {% if c.rank == 1 %}<span class="top-label">Top Candidate</span>{% endif %}
+                        {% if c.insight %}<span class="insight-tag insight-{{ c.insight|lower|replace(' ', '-') }}">{{
+                            c.insight }}</span>{% endif %}
+                    </span>
+                    <div class="candidate-badges">
+                        <span class="score-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" width="14" height="14">
+                                <circle cx="12" cy="12" r="10" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg> Score: {{ c.score }}/100 · {{ c.score_level }}</span>
+                        <span class="risk-badge risk-{{ c.risk_level }}"><span
+                                class="risk-dot risk-{{ c.risk_level|lower }}"></span> Risk: {{ c.risk_level }}</span>
+                    </div>
+                </div>
+
+                <div class="score-bar-wrap">
+                    <div class="score-bar-track">
+                        <div class="score-bar-fill {% if c.score < 40 %}level-low{% elif c.score < 70 %}level-mid{% else %}level-high{% endif %}"
+                            style="width: {{ c.score }}%"></div>
+                    </div>
+                    <span class="score-bar-label">{{ c.score }}%</span>
+                </div>
+
+                <div class="candidate-body">
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16" style="vertical-align:-2px">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg> Detected Skills ({{ c.skills_total }})</h4>
+                    {% if c.skills %}
+                    <div class="skills-wrap">
+                        {% for skill in c.skills %}
+                        <span class="skill-chip">{{ skill }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <p class="no-skills">No matching skills found in this resume.</p>
+                    {% endif %}
+
+                    {% if c.career_predictions %}
+                    <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16" style="vertical-align:-2px">
+                            <path d="M22 12A10 10 0 1 1 12 2" />
+                            <path d="M22 2L12 12" />
+                            <path d="M16 2h6v6" />
+                        </svg> Career Matches</h4>
+                    <div class="careers-wrap">
+                        {% for career in c.career_predictions %}
+                        <span class="career-chip">{{ career.role }} <span class="match-pct">{{ career.match_percentage
+                                }}%</span></span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="candidate-actions">
+                    <button class="btn-shortlist" onclick="setDecision(this, 'shortlisted')"
+                        data-filename="{{ c.filename }}" data-score="{{ c.score }}" data-risk="{{ c.risk_level }}"
+                        data-insight="{{ c.insight }}">Shortlist</button>
+                    <button class="btn-reject" onclick="setDecision(this, 'rejected')" data-filename="{{ c.filename }}"
+                        data-score="{{ c.score }}" data-risk="{{ c.risk_level }}"
+                        data-insight="{{ c.insight }}">Reject</button>
+                    <span class="decision-status"></span>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </main>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('resumes-input');
+        const fileList = document.getElementById('file-list');
+        const uploadBtn = document.getElementById('upload-btn');
+
+        fileInput.addEventListener('change', renderFileList);
+
+        function renderFileList() {
+            fileList.innerHTML = '';
+            const files = fileInput.files;
+            if (files.length === 0) { uploadBtn.disabled = true; return; }
+            uploadBtn.disabled = false;
+            for (const file of files) {
+                const li = document.createElement('li');
+                li.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" width="14" height="14" style="vertical-align:-2px"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg> ${file.name}
+                    <span style="margin-left:auto;color:var(--text-muted);font-size:.78rem">${(file.size / 1024).toFixed(1)} KB</span>`;
+                fileList.appendChild(li);
+            }
+        }
+
+        ['dragenter', 'dragover'].forEach(evt => {
+            dropZone.addEventListener(evt, e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+        });
+        ['dragleave', 'drop'].forEach(evt => {
+            dropZone.addEventListener(evt, e => { e.preventDefault(); dropZone.classList.remove('drag-over'); });
+        });
+        dropZone.addEventListener('drop', e => { e.preventDefault(); fileInput.files = e.dataTransfer.files; renderFileList(); });
+
+        function setDecision(btn, decision) {
+            const card = btn.closest('.candidate-card');
+            const statusEl = card.querySelector('.decision-status');
+            const alreadySet = card.classList.contains(decision);
+            card.classList.remove('shortlisted', 'rejected');
+            statusEl.classList.remove('visible', 'status-shortlisted', 'status-rejected');
+            statusEl.textContent = '';
+            if (alreadySet) return;
+            card.classList.add(decision);
+            statusEl.classList.add('visible', 'status-' + decision);
+            statusEl.textContent = decision === 'shortlisted' ? 'Shortlisted' : 'Rejected';
+
+            // Send to backend
+            fetch('/recruiter-decision', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    filename: btn.dataset.filename,
+                    score: parseInt(btn.dataset.score) || 0,
+                    risk_level: btn.dataset.risk,
+                    insight: btn.dataset.insight || '',
+                    decision: decision
+                })
+            }).catch(err => console.error('Decision save failed:', err));
+        }
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

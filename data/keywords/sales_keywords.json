@@ -1,0 +1,60 @@
+{
+    "critical": [
+        "Sales Strategy",
+        "Account Management",
+        "Lead Generation",
+        "CRM (Salesforce)",
+        "Business Development",
+        "Negotiation",
+        "Sales Forecasting",
+        "Quota Attainment",
+        "Prospecting",
+        "B2B Sales",
+        "Relationship Selling",
+        "Channel Sales",
+        "Sales Presentations"
+    ],
+    "important": [
+        "Market Analysis",
+        "Customer Acquisition",
+        "Inside Sales",
+        "Outside Sales",
+        "Retail Management",
+        "Consultative Selling",
+        "Sales Pipeline Management",
+        "Proposal Development",
+        "Territory Management",
+        "Client Retention"
+    ],
+    "bonus": [
+        "Social Selling",
+        "Technical Sales",
+        "Cross-selling/Up-selling",
+        "Public Speaking",
+        "Key Account Management",
+        "International Sales",
+        "Competitor Research"
+    ],
+    "action_verbs": [
+        "Negotiated",
+        "Generated",
+        "Targeted",
+        "Persuaded",
+        "Closed",
+        "Consulted",
+        "Achieved",
+        "Exceeded",
+        "Built",
+        "Managed"
+    ],
+    "soft_skills": [
+        "Resilience",
+        "Persistence",
+        "Interpersonal Skills",
+        "Persuasion",
+        "Motivation",
+        "Emotional Intelligence",
+        "Strategic Thinking",
+        "Confidence"
+    ]
+}

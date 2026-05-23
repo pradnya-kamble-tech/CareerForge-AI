@@ -1,0 +1,54 @@
+{% extends 'recruiter/dashboard.html' %}
+
+{% block content %}
+<div class="db-page-header" style="margin-bottom: 24px;">
+    <h2>My Pipeline</h2>
+    <p>Drag and drop candidate cards to update their hiring stage.</p>
+</div>
+
+<div class="rec-kanban" id="pipelineKanban">
+
+    <div class="rec-k-col" data-stage="Sourced">
+        <div class="rec-k-header">
+            <span>Sourced</span>
+            <span class="db-badge" id="count-Sourced">0</span>
+        </div>
+        <div class="rec-k-body" id="col-Sourced">
+            <!-- Cards injected dynamically -->
+        </div>
+    </div>
+
+    <div class="rec-k-col" data-stage="Reviewed">
+        <div class="rec-k-header">
+            <span>Reviewed</span>
+            <span class="db-badge" id="count-Reviewed">0</span>
+        </div>
+        <div class="rec-k-body" id="col-Reviewed"></div>
+    </div>
+
+    <div class="rec-k-col" data-stage="Shortlisted">
+        <div class="rec-k-header">
+            <span>Shortlisted</span>
+            <span class="db-badge" id="count-Shortlisted">0</span>
+        </div>
+        <div class="rec-k-body" id="col-Shortlisted"></div>
+    </div>
+
+    <div class="rec-k-col" data-stage="Interviewed">
+        <div class="rec-k-header">
+            <span>Interviewed</span>
+            <span class="db-badge" id="count-Interviewed">0</span>
+        </div>
+        <div class="rec-k-body" id="col-Interviewed"></div>
+    </div>
+
+    <div class="rec-k-col" data-stage="Hired/Rejected">
+        <div class="rec-k-header">
+            <span>Hired/Rejected</span>
+            <span class="db-badge" id="count-Hired/Rejected">0</span>
+        </div>
+        <div class="rec-k-body" id="col-Hired/Rejected"></div>
+    </div>
+
+</div>
+{% endblock %}

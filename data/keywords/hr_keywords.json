@@ -1,0 +1,59 @@
+{
+    "critical": [
+        "Talent Acquisition",
+        "Performance Management",
+        "Employee Relations",
+        "HRIS",
+        "Compensation and Benefits",
+        "Strategic HR",
+        "Succession Planning",
+        "Policy Development",
+        "Conflict Resolution",
+        "Workforce Planning",
+        "Employee Engagement",
+        "Onboarding",
+        "SHRM"
+    ],
+    "important": [
+        "Training and Development",
+        "Diversity and Inclusion",
+        "Payroll Processing",
+        "Labor Relations",
+        "Executive Coaching",
+        "HR Audits",
+        "Compliance Management",
+        "Job Analysis",
+        "Organizational Development"
+    ],
+    "bonus": [
+        "People Analytics",
+        "Psychometric Testing",
+        "Employer Branding",
+        "Remote Team Management",
+        "Change Management",
+        "Grievance Handling",
+        "Wellness Programs"
+    ],
+    "action_verbs": [
+        "Recruited",
+        "Managed",
+        "Mediated",
+        "Onboarded",
+        "Administered",
+        "Implemented",
+        "Retention",
+        "Communicated",
+        "Developed",
+        "Facilitated"
+    ],
+    "soft_skills": [
+        "Empathy",
+        "Integrity",
+        "Active Listening",
+        "Discretion",
+        "Negotiation",
+        "Cultural Sensitivity",
+        "Problem-solving",
+        "Leadership"
+    ]
+}

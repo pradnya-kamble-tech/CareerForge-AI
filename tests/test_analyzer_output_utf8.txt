@@ -1,0 +1,25 @@
+﻿python : .....
+At line:1 char:1
++ python 
+tests/test_analyzer.py 
+> tests/test_analyzer_o
+utput.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (.....:String)   
+  [], RemoteExcepti    
+on
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+-----------------------
+-----------------------
+-----------------------
+-
+Ran 5 tests in 0.022s
+
+OK

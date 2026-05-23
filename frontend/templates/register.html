@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Register – CareerForge AI Resume Intelligence System" />
+    <title>Register – CareerForge AI</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="auth-split">
+        <div class="auth-brand">
+            <div class="auth-brand-logo"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"
+                    width="24" height="24">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg> CareerForge <span class="accent">AI</span></div>
+            <p class="auth-brand-tagline">Create your account and start analyzing resumes with AI.</p>
+        </div>
+        <div class="auth-form-side">
+            <div class="auth-card">
+                <h1>Create <span class="accent">Account</span></h1>
+                <p class="subtitle">Register to start analysing your resume</p>
+
+                <div id="auth-error" class="flash-msg flash-error" style="display:none; margin-bottom:15px;"></div>
+
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required />
+                        <span class="error-inline" id="error-name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required
+                            autocomplete="email" />
+                        <span class="error-inline" id="error-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required
+                            autocomplete="new-password" />
+                        <span class="error-inline" id="error-password"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Select Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="user">Student</option>
+                            <option value="recruiter">Recruiter</option>
+                        </select>
+                        <span class="error-inline" id="error-role"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="job_domain">Job Domain</label>
+                        <select id="job_domain" name="job_domain" required>
+                            <option value="" disabled selected>— Select Major —</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Design">Design</option>
+                            <option value="Legal">Legal</option>
+                            <option value="HR">HR</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Education">Education</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Construction">Construction</option>
+                        </select>
+                        <span class="error-inline" id="error-job_domain"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary auth-btn">Create Account</button>
+                </form>
+                <p class="auth-footer">
+                    Already have an account? <a href="/login">Login here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Clear previous errors
+            document.querySelectorAll('.error-inline').forEach(el => el.textContent = '');
+            document.getElementById('auth-error').style.display = 'none';
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                role: document.getElementById('role').value,
+                job_domain: document.getElementById('job_domain').value
+            };
+
+            // Basic client-side validation
+            let hasError = false;
+            if (formData.password.length < 8 || !/\d/.test(formData.password)) {
+                document.getElementById('error-password').textContent = 'Min 8 chars with 1 number';
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    // Store token and redirect
+                    localStorage.setItem('access_token', result.access_token);
+                    localStorage.setItem('user', JSON.stringify(result.user));
+
+                    // Show success and redirect
+                    document.getElementById('auth-error').textContent = 'Registration successful! Redirecting...';
+                    document.getElementById('auth-error').className = 'flash-msg flash-success';
+                    document.getElementById('auth-error').style.display = 'block';
+
+                    setTimeout(() => {
+                        window.location.href = formData.role === 'recruiter' ? '/recruiter' : '/student';
+                    }, 1500);
+                } else {
+                    document.getElementById('auth-error').textContent = result.msg || 'Registration failed';
+                    document.getElementById('auth-error').style.display = 'block';
+                }
+            } catch (err) {
+                document.getElementById('auth-error').textContent = 'Connection error. Please try again.';
+                document.getElementById('auth-error').style.display = 'block';
+            }
+        });
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

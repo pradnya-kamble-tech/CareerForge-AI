@@ -1,0 +1,135 @@
+.recruiter-layout {
+    font-family: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+}
+
+.rec-main {
+    padding: 24px;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+}
+
+.rec-search-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 24px;
+    height: 100%;
+}
+
+.rec-filter-panel {
+    background: white;
+    padding: 20px;
+}
+
+.rec-filter-group {
+    margin-bottom: 16px;
+}
+
+.rec-filter-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+}
+
+.rec-filter-group select,
+.rec-filter-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+}
+
+.rec-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.rec-candidate-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rec-candidate-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--primary);
+}
+
+.rec-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.rec-modal.visible {
+    display: flex;
+}
+
+.rec-modal-content {
+    width: 500px;
+    max-width: 90vw;
+}
+
+/* Kanban */
+.rec-kanban {
+    display: flex;
+    gap: 16px;
+    height: calc(100vh - 150px);
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.rec-k-col {
+    background: #e2e8f0;
+    min-width: 280px;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.rec-k-header {
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.rec-k-body {
+    padding: 12px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.rec-k-card {
+    background: white;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    user-select: none;
+}
+
+.rec-k-card:active {
+    cursor: grabbing;
+}
+
+.rec-k-body.drag-over {
+    background: rgba(0, 0, 0, 0.05);
+}

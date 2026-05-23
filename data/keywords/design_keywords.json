@@ -1,0 +1,61 @@
+{
+    "critical": [
+        "Graphic Design",
+        "UI/UX Design",
+        "Layout Design",
+        "Typography",
+        "Color Theory",
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Figma",
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Visual Identity",
+        "Interaction Design"
+    ],
+    "important": [
+        "Sketch",
+        "InVision",
+        "Design Thinking",
+        "Responsive Design",
+        "Motion Graphics",
+        "Photography",
+        "Branding",
+        "Accessibility Standards",
+        "Web Design",
+        "Design Systems"
+    ],
+    "bonus": [
+        "3D Modeling",
+        "After Effects",
+        "Blender",
+        "HTML/CSS",
+        "Video Editing",
+        "Illustration",
+        "Storyboarding",
+        "Photography Editing"
+    ],
+    "action_verbs": [
+        "Designed",
+        "Conceptualized",
+        "Visualized",
+        "Prototyped",
+        "Iterated",
+        "Collaborated",
+        "Transformed",
+        "Optimized",
+        "Presented",
+        "Refined"
+    ],
+    "soft_skills": [
+        "Critique Receptiveness",
+        "Creativity",
+        "Empathy for Users",
+        "Problem-solving",
+        "Attention to Detail",
+        "Effective Communication",
+        "Time Management",
+        "Project Collaboration"
+    ]
+}

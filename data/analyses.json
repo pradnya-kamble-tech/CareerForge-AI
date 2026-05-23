@@ -1,0 +1,3473 @@
+[
+  {
+    "id": "1226f153c28a4ee3b89e5501ebb326ce",
+    "success": true,
+    "analysis_id": "1226f153c28a4ee3b89e5501ebb326ce",
+    "message": "'259-job-resume-template.pdf' uploaded and analysed successfully!",
+    "filename": "198a23b3_259-job-resume-template.pdf",
+    "size_kb": 253.4,
+    "extracted_text": "Sally\nBranders\nJOB TITLE\nCONTACTO PROFESSIONAL EXPERIENCE\nsally.branders@gmail.com\nXYZ CONSULTING FIRM\nBusiness Development Manager\n+1 232 555 55 55\nNY, USA | 00/0000 - 00/0000\nNY, US A • Developed and executed a comprehensive sales\nstrategy, resulting in a 40% increase in annual\nlinked in/sally.branders\nrevenue within one year.\n• Identified and pursued new business\nPROFILE SUMMARY op portunities through market research.\nABC CORPORATION\nBusiness development manager\nSales Representative\nlooking to obtain a challenging\nNY, USA | 00/0000 - 00/0000\nposition in a organization, utilizing • Achieved consistent sales targets by\nmy proven track record in driving\nsuccessfully prospecting and closing new\nrevenue growth and forging\nbusiness opportunities in a competitive market.\nstrategic partnerships to achieve • Conducted product demonstrations and\nbusiness objectives.\npresentations to potential clients.\npointsMenciona aquí otras tareas realizadas.\nDEF RESEARCH AGENCY\nMar•k etM Reensceiaorncah aAqnuaíl yosttr as tareas realizadas.\nSKILLS\nNY, USA | 00/0000 - 00/0000\n✓ Excel • Conducted in-depth market research and\ncompetitor analysis, providing valuable insights\n✓ PowerPoint\nto guide strategic decision-making.\n✓ CRM • Developed comprehensive market reports.\npresented findings to senior management,\n✓ Problem-Solving\ncontributing to the successful launch of new\n✓ Team Leadership products and services.Menciona aquí otras\nEDUCATION\ntareas realizadas.\nMASTER OF BUSINESS ADMINISTRATION\nLANGUAGES\nNYU\nNY, USA | 20XX - 20XX\n✓ English: Native\n✓ Spanish: Intermediate BACHELOR OF COMMERCE IN MARKETING\nNYU\n✓ French: Beginner NY, USA | 20XX - 20XX\n©AZURIUS - My-resume-templates.com\n\nDear Job Seeker,\nIf you're having difficulty composing your resume, here are some free\nresources available that can assist you in creating a strong resume that\nhighlights your suitability for the position to potential employers:\n• How to Make a Good Resume\n• Skills to Put on a Resume\n• Resume Objective Examples\nAlso discover other free downloadable and ready-to-fill CV templates in\nWord format:\n• Basic Resume Templates\n• Modern Resume Templates\n• Creative Resume Templates\n• Professional Resume Templates\n• Europass CV\nBest regards,\n\nCOPYRIGHT - PLEASE READ THIS MESSAGE\n©These examples of free resume templates are the property of Azurius S.L. You may\ndownload and modify them without any problem if they are for personal use.\nDo not forget to remove this copyright notice before modifying and printing your CV.\nYou cannot resell these examples or their derivatives. You cannot make them available on other websites without our\nconsent. For any related questions, please write to us at contact@my-resume-templates.com\nDiscover more resume templates at www.my-resume-templates.com",
+    "skills": [
+      "Leadership"
+    ],
+    "skills_categorized": {
+      "Soft Skills": [
+        "Leadership"
+      ]
+    },
+    "skills_total": 1,
+    "score": 25,
+    "score_level": "Low",
+    "score_reason": "Your resume mentions 1 recognised skill(s). Skills span 1 category. Consider adding more technical and soft skills to strengthen your profile. Tip: Broaden your skill categories (e.g., add cloud, databases, or soft skills).",
+    "score_breakdown": {
+      "skill_score": 20,
+      "diversity_bonus": 5,
+      "skills_detected": 1,
+      "categories_covered": 1
+    },
+    "risk_level": "High",
+    "risk_icon": "high",
+    "risk_reason": "Resume score is 25/100 with 1 skill(s) detected. This indicates a significant gap between your profile and industry expectations.",
+    "risk_suggestions": [
+      "Add more technical skills (e.g., Python, SQL, cloud platforms).",
+      "Include relevant certifications or project experience.",
+      "Diversify skills across multiple categories for a stronger profile."
+    ],
+    "career_predictions": [],
+    "skill_gap": {
+      "target_role": "Full-Stack Developer",
+      "target_icon": "FS",
+      "missing_skills": [
+        {
+          "skill": "HTML",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "CSS",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "JavaScript",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "React",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "Node.js",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "Python",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "SQL",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "Git",
+          "priority": "High",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "Flask",
+          "priority": "Medium",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "Django",
+          "priority": "Medium",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "MongoDB",
+          "priority": "Medium",
+          "reason": "Core requirement for Full-Stack Developer"
+        },
+        {
+          "skill": "REST API",
+          "priority": "Medium",
+          "reason": "Core requirement for Full-Stack Developer"
+        }
+      ],
+      "recommended_skills": [],
+      "summary": "Your resume best aligns with the **Full-Stack Developer** role (0/12 skills matched). You are missing 12 key skill(s): HTML, CSS, JavaScript, React, Node.js....",
+      "gap_percentage": 100,
+      "matched_count": 0,
+      "total_role_skills": 12
+    },
+    "explainability": {
+      "score_reason": "Your resume mentions 1 recognised skill(s). Skills span 1 category. Consider adding more technical and soft skills to strengthen your profile. Tip: Broaden your skill categories (e.g., add cloud, databases, or soft skills).",
+      "risk_reason": "Resume score is 25/100 with 1 skill(s) detected. This indicates a significant gap between your profile and industry expectations.",
+      "risk_suggestions": [
+        "Add more technical skills (e.g., Python, SQL, cloud platforms).",
+        "Include relevant certifications or project experience.",
+        "Diversify skills across multiple categories for a stronger profile."
+      ],
+      "career_reasons": [],
+      "skill_gap_reason": "Your resume best aligns with the **Full-Stack Developer** role (0/12 skills matched). You are missing 12 key skill(s): HTML, CSS, JavaScript, React, Node.js...."
+    }
+  },
+  {
+    "id": "66c2bc29dc744d5d952e081e5607210d",
+    "success": true,
+    "analysis_id": "66c2bc29dc744d5d952e081e5607210d",
+    "message": "'341-resume-template-ats-basic.pdf' uploaded and analysed successfully!",
+    "filename": "11c60901_341-resume-template-ats-basic.pdf",
+    "size_kb": 298.5,
+    "extracted_text": "Michael Carter\nDIGITAL PROJECT MANAGER\nmichael.carter@email.com | +1 (312) 555-789 0 | Chicago, IL | linkedin.com/in/michaelcarter\nResults-driven Project Manager with over 10 years of experience in IT project management and digital\ntransformat ion. Expertise in managing deadlines, budgets, and cross-functional teams to deliver high-\nimpact solu tions. Recognized for strategic leadership and problem-solving skills.\nWORK EX PERIENCE\nSenior Digital Project Manager\nCoca-Cola, Arlington, VA | 20XX – Present\n• Led key digital transformation initiatives, improving efficiency and driving process automation.\n• Managed c ross-functional teams to implement cutting-edge technology solutions.\n• Oversaw b udget planning and timeline execution for major projects, ensuring on-time delivery.\nIT Transformat ion Project Manager\nCapital Network, Chicago, IL | 20XX – 20XX\n• Analyzed and streamlined business processes, increasing productivity by 30%.\n• Supervised large-scale data migration and ERP integration projects.\n• Developed and executed a communication strategy to ensure seamless change management.\nJunior Project Manager\nGoogle, San Francisco, CA | 20XX – 20XX\n• Contributed to the successful implementation of a CRM system for a leading aerospace client.\n• Facilitated collaboration between technical and business teams to align project goals.\n• Managed r isk tracking and KPI monitoring throughout the project lifecycle.\nEDUCATION\nMaster’s in Pro ject & Program Management, Barcelona | 20XX – 20XX\nNorthwestern U niversity, Evanston, IL\nBachelor’s Deg ree in Computer Engineering | 20XX – 20XX\nUniversity of California, Berkeley, CA\nSKILLS\n• Agile & Waterfall project management methodologies\n• Budget management and financial tracking\n• Data-driven strategic decision-making, Coordination of international teams\nLANGUAGES\n• English: Native\n• Spanish: Fluent\n©AZURIUS – Modelos-de-curriculum.com\n\nDear Job Seeker,\nIf you're having difficulty composing your resume, here are some free\nresources available that can assist you in creating a strong resume that\nhighlights your suitability for the position to potential employers:\n• How to Make a Good Resume\n• Skills to Put on a Resume\n• Resume Objective Examples\nAlso, discover other free downloadable and ready-to-fill CV templates in\nWord format:\n• Basic Resume Templates\n• Modern Resume Templates\n• Creative Resume Templates\n• Professional Resume Templates\n• Europass CV\nBest regards,\n\nCOPYRIGHT - PLEASE READ THIS MESSAGE\n©These examples of free resume templates are the property of Azurius S.L. You may\ndownload and modify them without any problem if they are for personal use.\nDo not forget to remove this copyright notice before modifying and printing your CV.\nYou cannot resell these examples or their derivatives. You cannot make them available on other websites\nwithout our consent. For any related questions, please write to us at contact@my-resume-templates.com\nDiscover more resume templates at www.my-resume-templates.com",
+    "skills": [
+      "C",
+      "R",
+      "Leadership",
+      "Communication",
+      "Project Management",
+      "Agile"
+    ],
+    "skills_categorized": {
+      "Programming Languages": [
+        "C",
+        "R"
+      ],
+      "Soft Skills": [
+        "Leadership",
+        "Communication",
+        "Project Management",
+        "Agile"
+      ]
+    },
+    "skills_total": 6,
+    "score": 69,
+    "score_level": "High",
+    "score_reason": "Your resume mentions 6 recognised skill(s). Skills span 2 categories. Strong skill coverage. Try diversifying across more categories for an even higher score. Tip: Broaden your skill categories (e.g., add cloud, databases, or soft skills).",
+    "score_breakdown": {
+      "skill_score": 59,
+      "diversity_bonus": 10,
+      "skills_detected": 6,
+      "categories_covered": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Resume score is 69/100 with 6 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Include relevant certifications or project experience."
+    ],
+    "career_predictions": [
+      {
+        "role": "Data Analyst",
+        "icon": "DA",
+        "match_percentage": 9,
+        "matched_skills": [
+          "R"
+        ],
+        "reason": "Based on your skills: R. You match 1 of 11 key skills for this role."
+      },
+      {
+        "role": "Data Scientist",
+        "icon": "DS",
+        "match_percentage": 8,
+        "matched_skills": [
+          "R"
+        ],
+        "reason": "Based on your skills: R. You match 1 of 12 key skills for this role."
+      }
+    ],
+    "skill_gap": {
+      "target_role": "Data Scientist",
+      "target_icon": "DS",
+      "missing_skills": [
+        {
+          "skill": "Python",
+          "priority": "High",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "Machine Learning",
+          "priority": "High",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "Deep Learning",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "TensorFlow",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "PyTorch",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "Pandas",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "NumPy",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "Scikit-learn",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "Data Analysis",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "Data Visualization",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        },
+        {
+          "skill": "MATLAB",
+          "priority": "Medium",
+          "reason": "Core requirement for Data Scientist"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "SQL",
+          "reason": "Important for Data Analyst role",
+          "from_role": "Data Analyst",
+          "icon": "DA"
+        },
+        {
+          "skill": "Matplotlib",
+          "reason": "Important for Data Analyst role",
+          "from_role": "Data Analyst",
+          "icon": "DA"
+        },
+        {
+          "skill": "Seaborn",
+          "reason": "Important for Data Analyst role",
+          "from_role": "Data Analyst",
+          "icon": "DA"
+        },
+        {
+          "skill": "Excel",
+          "reason": "Important for Data Analyst role",
+          "from_role": "Data Analyst",
+          "icon": "DA"
+        },
+        {
+          "skill": "MySQL",
+          "reason": "Important for Data Analyst role",
+          "from_role": "Data Analyst",
+          "icon": "DA"
+        },
+        {
+          "skill": "PostgreSQL",
+          "reason": "Important for Data Analyst role",
+          "from_role": "Data Analyst",
+          "icon": "DA"
+        }
+      ],
+      "summary": "Your resume best aligns with the **Data Scientist** role (1/12 skills matched). You are missing 11 key skill(s): Python, Machine Learning, Deep Learning, TensorFlow, PyTorch.... We also recommend learning SQL, Matplotlib, Seaborn to broaden your career options.",
+      "gap_percentage": 92,
+      "matched_count": 1,
+      "total_role_skills": 12
+    },
+    "explainability": {
+      "score_reason": "Your resume mentions 6 recognised skill(s). Skills span 2 categories. Strong skill coverage. Try diversifying across more categories for an even higher score. Tip: Broaden your skill categories (e.g., add cloud, databases, or soft skills).",
+      "risk_reason": "Resume score is 69/100 with 6 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Include relevant certifications or project experience."
+      ],
+      "career_reasons": [
+        {
+          "role": "Data Analyst",
+          "match": 9,
+          "reason": "Based on your skills: R. You match 1 of 11 key skills for this role."
+        },
+        {
+          "role": "Data Scientist",
+          "match": 8,
+          "reason": "Based on your skills: R. You match 1 of 12 key skills for this role."
+        }
+      ],
+      "skill_gap_reason": "Your resume best aligns with the **Data Scientist** role (1/12 skills matched). You are missing 11 key skill(s): Python, Machine Learning, Deep Learning, TensorFlow, PyTorch.... We also recommend learning SQL, Matplotlib, Seaborn to broaden your career options."
+    }
+  },
+  {
+    "id": "8c880b9178984f1ab836a7df6eb03045",
+    "success": true,
+    "analysis_id": "8c880b9178984f1ab836a7df6eb03045",
+    "message": "'221-simple-resume-template.pdf' uploaded and analysed successfully!",
+    "filename": "ae73ab8a_221-simple-resume-template.pdf",
+    "size_kb": 299.7,
+    "extracted_text": "NAME SURNAME\nF inancial Analyst\nA detail-oriented and results-driven Financial Analyst with over 7 years of experience in\nfinancial analysis, forecasting, and budgeting. Proven ability to provide actionable insights\nth rough data analysis and financial modeling. Strong analytical and problem-solving skills.\nname.surname@gmail.com NY, USA +1 222 222 222\nLANGUAGES\nEnglish Spanish French\nEDUCATION\n20XX-20XX Master of Business Administration\nNY-USA NYU\n20XX-20XX Bachelor of Science in Finance\nNY-USA NYU\nSKILLS\nHard: Financial Modeling, Excel, Word, PowerPoint, Outlook.\nSoft: Analytical thinking Problem Solving, Communication, Time Management.\nPROFESSIONAL EXPERIENCE\nNov. 20XX – Jul. 20XX ABC CORPORATION\nNY, USA Senior Financial Analyst\n• Conducted comprehensive financial analysis to identify cost-saving opportunities, resulting in a 10%\nreduction in operational expenses.\n• Developed complex financial models to support strategic decision-making, leading to a successful\nmerger and acquisition deal worth $50 million.\nNov. 20XX – Jul. 20XX DEF INCORPORATION\nany\nNY, USA Financial Planning & Analyst Manager\n• Conducted in-depth market research and due diligence on potential investment opportunities,\nresulting in the identification of a high-performing fund that generated a 20% return on investment.\n• Monitored portfolio performance and recommended adjustments to maintain portfolio health,\nleading to consistent returns above industry benchmarks.\nNov. 20XX – Jul. 20XX GHI INVESTMENT GROUP\nNY, USA Investment Analyst\n• Conducted in-depth market research and due diligence on potential investment opportunities,\nresulting in the identification of a high-performing fund that generated a 20% return on investment.\n• Monitored portfolio performance and recommended adjustments to maintain portfolio health,\nleading to consistent returns above industry benchmarks.\n©AZURIUS - My-resume-templates.com\n\nDear Job Seeker,\nIf you're having difficulty composing your resume, here are some free\nresources available that can assist you in creating a strong resume that\nhighlights your suitability for the position to potential employers:\n• How to Make a Good Resume\n• Skills to Put on a Resume\n• Resume Objective Examples\nAlso, discover other free downloadable and ready-to-fill CV templates in\nWord format:\n• Basic Resume Templates\n• Modern Resume Templates\n• Creative Resume Templates\n• Professional Resume Templates\n• Europass CV\nBest regards,\n\nCOPYRIGHT - PLEASE READ THIS MESSAGE\n©These examples of free resume templates are the property of Azurius S.L. You may\ndownload and modify them without any problem if they are for personal use.\nDo not forget to remove this copyright notice before modifying and printing your CV.\nYou cannot resell these examples or their derivatives. You cannot make them available on other websites without our\nconsent. For any related questions, please write to us at contact@my-resume-templates.com\nDiscover more resume templates at www.my-resume-templates.com",
+    "skills": [
+      "Data Analysis",
+      "Communication",
+      "Problem Solving",
+      "Time Management",
+      "Analytical Thinking",
+      "Research",
+      "Excel",
+      "Word",
+      "PowerPoint",
+      "Financial Analysis",
+      "Budgeting",
+      "Forecasting",
+      "Market Research",
+      "Computer Vision"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Data Analysis",
+        "Computer Vision"
+      ],
+      "Soft Skills": [
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Analytical Thinking",
+        "Research"
+      ],
+      "Tools": [
+        "Excel",
+        "Word",
+        "PowerPoint"
+      ],
+      "Domain": [
+        "Financial Analysis",
+        "Budgeting",
+        "Forecasting",
+        "Market Research"
+      ]
+    },
+    "skills_total": 14,
+    "score": 38,
+    "score_level": "Weak",
+    "score_reason": "Resume score: 38/100 (Weak). Strongest area: Skill Volume (85/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 70,
+      "diversity_bonus": 85,
+      "skills_detected": 14,
+      "categories_covered": 4
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (48.5% rejection probability). Resume score is 38/100 with 14 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills).",
+      "Strengthen your resume with relevant skills, projects, and certifications."
+    ],
+    "career_predictions": [],
+    "skill_gap": {},
+    "explainability": {
+      "score_reason": "Resume score: 38/100 (Weak). Strongest area: Skill Volume (85/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (48.5% rejection probability). Resume score is 38/100 with 14 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills).",
+        "Strengthen your resume with relevant skills, projects, and certifications."
+      ],
+      "career_reasons": [],
+      "skill_gap_reason": ""
+    }
+  },
+  {
+    "id": "d7b9abf4b3a047e98a2e6c7b1346ad1d",
+    "success": true,
+    "analysis_id": "d7b9abf4b3a047e98a2e6c7b1346ad1d",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "categories_covered": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [],
+    "skill_gap": {},
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [],
+      "skill_gap_reason": ""
+    }
+  },
+  {
+    "id": "ad24c9a2dd4f4818bcd7317271826dcb",
+    "success": true,
+    "analysis_id": "ad24c9a2dd4f4818bcd7317271826dcb",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "categories_covered": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [],
+    "skill_gap": {},
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [],
+      "skill_gap_reason": ""
+    }
+  },
+  {
+    "id": "2b112eb4817c4a068cbceec2ca6650f8",
+    "success": true,
+    "analysis_id": "2b112eb4817c4a068cbceec2ca6650f8",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "c7fcd9deb1614c7898ec40dcee3b8467",
+    "success": true,
+    "analysis_id": "c7fcd9deb1614c7898ec40dcee3b8467",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "a9a95d070ac64c8688735b3591f5176c",
+    "success": true,
+    "analysis_id": "a9a95d070ac64c8688735b3591f5176c",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "4b6d3c5b551e4e97b6a4fb2476563843",
+    "success": true,
+    "analysis_id": "4b6d3c5b551e4e97b6a4fb2476563843",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "d9776c38c5c545958fb209e785a9b10a",
+    "success": true,
+    "analysis_id": "d9776c38c5c545958fb209e785a9b10a",
+    "message": "'28642819.pdf' uploaded and analysed successfully!",
+    "filename": "840fbd9b_28642819.pdf",
+    "size_kb": 31.2,
+    "extracted_text": "LEAD TEACHER\nSummary\nSolid background in special needs and early childhood education, with strong emphasis in children's development. Consistently exceed teaching\ngoals and parents expectations. Experienced in assessing and evaluating individual needs to provide an enhanced learning experience. Skilled in\ndeveloping and implementing strategies and procedures.Enthusiastic teacher who has earned trust and respect from students, colleagues and\nadministration for 12+ years.\nCore Qualifications\nExcellent classroom management\nActive participation in [groups, plans, events]\nTeaching, tutoring and counseling\nExperience working special needs students\nEffectively work with parents\nInteractive teaching/learning\nInnovative lesson planning\nClassroom management\nEffective listening\nCPR/First-aid certified\nGoal Setting and Implementation\nAchievements\nTeam Building and Leadership\nCreated collaborative classroom experience through [process, initiative].\nLesson Planning:\nIntroduced new learning methods to ensure total comprehension for all students.\nDeveloped new learning center for reading assistance. Education Strategies Â\nEmployed special educational strategies and techniques during instruction to improve the development of sensory/perceptual-motor skills,\nlanguage, cognition, and memory.\nPlan Development Â\nPlanned and conducted activities for a balanced program of instruction, demonstration, and work time that provided students with\nopportunities to observe, question, and investigate.\nParent Communication Â\nRegularly met with parents to discuss student issues and course weakness areas.\nCreative Lesson Planning Â\nMotivated students to engage with course materials for History of WWII course by organizing a war veteran to come to class to speak\nabout his personal experience.\nProfessional Experience\nLead Teacher Aug 2013 to Jun 2015\nCompany Name ï¼​ City , State\nManage children portfolio and progress using Teaching Strategies Gold Plan and execute daily lessons.\nMake in-home student referrals\nMaintain the comfort, safety and educational demeanor of the classroom environment.\nSupervise one assistant teacher's in the classroom.\nPlan and allocate work equally among the staff.\nEvaluate and test students for appropriate class placement.\nHead Teacher Jan 2003 to Aug 2013\nCompany Name ï¼​ City , State\nEvaluate and test students for appropriate class placement.\nTranslate CPSE evaluations to non-English speaking parents.\nCollaborate with school administrators and parents to develop student program plans to ensure successful outcomes.\n\nConduct family conference to discuss student progress, needs and referrals Develop and enter daily observations, progress and attendance\nnotes into school data base Plan and execute daily lessons Make in-home student referrals Maintain the comfort, safety and educational\ndemeanor of the classroom environment.\nSupervise three assistant teachers in the classroom.\nPlan and allocate work equally among the staff.\ncase manager Oct 2005 to May 2006\nCompany Name ï¼​ City , State\nâ€¢Managed a caseload of over 18 at risk teenage and young adult females\nâ€¢Met with client's family members and drug counselors when substance abuse was issue in order to determine such activities and keep\nrecidivism down.\nâ€¢Helped clients with school enrollment and verified attendance\nâ€¢Held weekly team conferences to discuss client court dates, progress and concern in order to prepare monthly court reports for legal staff and\njudges.\nâ€¢Provided case management services, escort, face to face services in community, communication with community providers, conducted site\nvisits to shelter, residential and outpatient programs, and attending case conferences to engage and support participants in community treatment.\nâ€¢Addressed any ongoing legal and or personal issues our female population was dealing with.\nâ€¢Kept track of client progress via company database systems.\nâ€¢Set up random drug tests in collaboration with our Substance Unit for female participants abuse.\nâ€¢Directed any participant mental health concerns to our director.\nâ€¢Made referrals for participants to outpatient/inpatient drug treatments facilities\nâ€¢Act as advocate and liaison for participants in securing access to community services, income support and self help\nAssistant Teacher Jan 2001 to Jan 2003\nCompany Name ï¼​ City , State\nCollaborated with classroom assistants and teachers in creating weekly classroom lesson plans on a bi-weekly basis.\nEvaluated and tested students for appropriate class placement.\nReviewed daily progress notes before they were entered into the company's electronic system and edited them as needed.\nResponsible for ordering, receiving and distributing office and classroom supplies.\nEducation and Training\nM.S , Education/ Special Education Early childhood 2006 Touro College ï¼​ City , State\nA.S , Liberal arts 2000 Kingsborough Community College ï¼​ City , State\nLiberal arts\nBachelor of Science , Psychology College of Staten Island ï¼​ City , State\nCertifications\nCPR and First Aid\nCommunity Involvement\nRecognition for planning and presenting at UNICEF conference.\nSkills\nbilingual speaking and reading fluently in English and Spanish, demonstrate your ability to work well with a team, handles details; coordinates and\ncompletes tasks,plans and arranges activities; multi tasks,writes clearly and concisely; listens attentively; openly expresses ideas,provides and asks\nfor feedback, and cooperates and works well with others.",
+    "skills": [
+      "Leadership",
+      "Communication",
+      "Collaboration",
+      "Lesson Planning",
+      "Teaching",
+      "Training",
+      "Business Intelligence"
+    ],
+    "skills_categorized": {
+      "Soft Skills": [
+        "Leadership",
+        "Communication",
+        "Collaboration"
+      ],
+      "Domain": [
+        "Lesson Planning",
+        "Teaching",
+        "Training",
+        "Business Intelligence"
+      ]
+    },
+    "skills_total": 7,
+    "score": 20,
+    "score_level": "Weak",
+    "score_reason": "Resume score: 20/100 (Weak). Strongest area: Skill Volume (50/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 35,
+      "diversity_bonus": 50,
+      "skills_detected": 7,
+      "skills_count": 7,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "High",
+    "risk_icon": "high",
+    "risk_reason": "Risk level: High (61.2% rejection probability). Resume score is 20/100 with 7 skill(s) detected. This indicates significant gaps that may lead to rejection.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills).",
+      "Strengthen your resume with relevant skills, projects, and certifications."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 34,
+        "matched_skills": [
+          "Communication",
+          "Leadership"
+        ],
+        "reason": "2 of 5 key skills matched for this role."
+      },
+      {
+        "role": "TEACHER",
+        "match_percentage": 17,
+        "matched_skills": [
+          "Teaching",
+          "Training",
+          "Communication",
+          "Leadership"
+        ],
+        "reason": "4 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 6,
+        "matched_skills": [
+          "Training",
+          "Communication",
+          "Leadership"
+        ],
+        "reason": "3 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Time Management",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 67,
+      "match_percentage": 33.3,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [
+        "Communication",
+        "Leadership"
+      ],
+      "summary": "2/6 role-critical skills found (33.3% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 20/100 (Weak). Strongest area: Skill Volume (50/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: High (61.2% rejection probability). Resume score is 20/100 with 7 skill(s) detected. This indicates significant gaps that may lead to rejection.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills).",
+        "Strengthen your resume with relevant skills, projects, and certifications."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 34,
+          "reason": "2 of 5 key skills matched for this role."
+        },
+        {
+          "role": "TEACHER",
+          "match": 17,
+          "reason": "4 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 6,
+          "reason": "3 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "2/6 role-critical skills found (33.3% match)"
+    }
+  },
+  {
+    "id": "a9938271384646209770f3278c31d290",
+    "success": true,
+    "analysis_id": "a9938271384646209770f3278c31d290",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "c0f8bb2605c2468cb426562e845de11b",
+    "success": true,
+    "analysis_id": "c0f8bb2605c2468cb426562e845de11b",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "af530b16d5cf4970b0b509be7b300bcc",
+    "success": true,
+    "analysis_id": "af530b16d5cf4970b0b509be7b300bcc",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "skill_gap": {
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "67c76644301c4067926d27ed4663b554",
+    "success": true,
+    "analysis_id": "67c76644301c4067926d27ed4663b554",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "role": "BUSINESS-DEVELOPMENT",
+    "skill_gap": {
+      "missing": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "5f47bf03ede843889a18b5a8508bfff1",
+    "success": true,
+    "analysis_id": "5f47bf03ede843889a18b5a8508bfff1",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "role": "BUSINESS-DEVELOPMENT",
+    "skill_gap": {
+      "missing": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "46450456ca2a4f9fa1542f2aec2d83e5",
+    "success": true,
+    "analysis_id": "46450456ca2a4f9fa1542f2aec2d83e5",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Flask",
+      "REST API",
+      "Machine Learning",
+      "Data Analysis",
+      "SQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git",
+      "Natural Language Processing",
+      "Artificial Intelligence",
+      "API Development"
+    ],
+    "skills_categorized": {
+      "Technical": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js",
+        "Flask",
+        "REST API",
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "Linux",
+        "Natural Language Processing",
+        "Artificial Intelligence",
+        "API Development"
+      ],
+      "Tools": [
+        "Git"
+      ]
+    },
+    "skills_total": 21,
+    "score": 50,
+    "score_level": "Average",
+    "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+    "score_breakdown": {
+      "skill_score": 100,
+      "diversity_bonus": 100,
+      "skills_detected": 21,
+      "skills_count": 21,
+      "categories_covered": 2,
+      "categories_count": 2
+    },
+    "risk_level": "Medium",
+    "risk_icon": "medium",
+    "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+    "risk_suggestions": [
+      "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+    ],
+    "career_predictions": [
+      {
+        "role": "BUSINESS-DEVELOPMENT",
+        "match_percentage": 39,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "CONSULTANT",
+        "match_percentage": 8,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      },
+      {
+        "role": "ENGINEERING",
+        "match_percentage": 7,
+        "matched_skills": [],
+        "reason": "0 of 5 key skills matched for this role."
+      }
+    ],
+    "role": "BUSINESS-DEVELOPMENT",
+    "skill_gap": {
+      "missing": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "missing_skills": [
+        {
+          "skill": "Communication",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Time Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Leadership",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "High"
+        },
+        {
+          "skill": "Project Management",
+          "reason": "Required for BUSINESS-DEVELOPMENT profiles.",
+          "priority": "Medium"
+        }
+      ],
+      "recommended_skills": [
+        {
+          "skill": "Communication",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Problem Solving",
+          "reason": "High impact on score."
+        },
+        {
+          "skill": "Teamwork",
+          "reason": "High impact on score."
+        }
+      ],
+      "gap_percentage": 100,
+      "match_percentage": 0.0,
+      "top_skills": [
+        "Communication",
+        "Problem Solving",
+        "Teamwork",
+        "Time Management",
+        "Leadership",
+        "Project Management"
+      ],
+      "matched": [],
+      "summary": "0/6 role-critical skills found (0.0% match)",
+      "target_role": "BUSINESS-DEVELOPMENT"
+    },
+    "explainability": {
+      "score_reason": "Resume score: 50/100 (Average). Strongest area: Skill Relevance (100/100). Needs improvement: Experience Quality (0/100).",
+      "risk_reason": "Risk level: Medium (39.8% rejection probability). Resume score is 50/100 with 21 skill(s) detected. Your profile meets basic requirements but has room for improvement.",
+      "risk_suggestions": [
+        "Diversify skills across multiple categories (e.g., cloud, databases, soft skills)."
+      ],
+      "career_reasons": [
+        {
+          "role": "BUSINESS-DEVELOPMENT",
+          "match": 39,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "CONSULTANT",
+          "match": 8,
+          "reason": "0 of 5 key skills matched for this role."
+        },
+        {
+          "role": "ENGINEERING",
+          "match": 7,
+          "reason": "0 of 5 key skills matched for this role."
+        }
+      ],
+      "skill_gap_reason": "0/6 role-critical skills found (0.0% match)"
+    }
+  },
+  {
+    "id": "931762a71c1a460a8a2a2946773a2503",
+    "success": true,
+    "analysis_id": "931762a71c1a460a8a2a2946773a2503",
+    "message": "'test.pdf' uploaded and analysed successfully!",
+    "filename": "a815666f_test.pdf",
+    "size_kb": 0.0,
+    "extracted_text": "Professional Summary: Experienced Nurse. Skills: Patient Care, HIPAA Compliance. Experience: 10 years at General Hospital.",
+    "skills": [
+      "Patient Care",
+      "HIPAA"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Patient Care",
+        "HIPAA"
+      ],
+      "important": [],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 2,
+    "score": 11,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+    "score_breakdown": {
+      "critical": 6.2,
+      "important": 0.0,
+      "structure": 5,
+      "action_verbs": 0.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Healthcare Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Healthcare Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "Clinical Assessment",
+        "EMR",
+        "Medication Administration",
+        "Vitals Monitoring",
+        "Infection Control"
+      ],
+      "important_gaps": [
+        "Patient Education",
+        "Medical Coding",
+        "ICD-10",
+        "BLS",
+        "ACLS"
+      ],
+      "summary": "Missing 11 critical skills identified in the Healthcare domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Healthcare Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Healthcare domain."
+    }
+  },
+  {
+    "id": "5d0be8b8efcd41fa8f0115adedabe694",
+    "success": true,
+    "analysis_id": "5d0be8b8efcd41fa8f0115adedabe694",
+    "message": "'test.pdf' uploaded and analysed successfully!",
+    "filename": "1988f345_test.pdf",
+    "size_kb": 0.0,
+    "extracted_text": "Professional Summary: Experienced Nurse. Skills: Patient Care, HIPAA Compliance. Experience: 10 years at General Hospital.",
+    "skills": [
+      "Patient Care",
+      "HIPAA"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Patient Care",
+        "HIPAA"
+      ],
+      "important": [],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 2,
+    "score": 11,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+    "score_breakdown": {
+      "critical": 6.2,
+      "important": 0.0,
+      "structure": 5,
+      "action_verbs": 0.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Healthcare Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Healthcare Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "Clinical Assessment",
+        "EMR",
+        "Medication Administration",
+        "Vitals Monitoring",
+        "Infection Control"
+      ],
+      "important_gaps": [
+        "Patient Education",
+        "Medical Coding",
+        "ICD-10",
+        "BLS",
+        "ACLS"
+      ],
+      "summary": "Missing 11 critical skills identified in the Healthcare domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Healthcare Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Healthcare domain."
+    }
+  },
+  {
+    "id": "67dc5b0083fc4014bb05dbc6e76fd607",
+    "success": true,
+    "analysis_id": "67dc5b0083fc4014bb05dbc6e76fd607",
+    "message": "'test.pdf' uploaded and analysed successfully!",
+    "filename": "3d5e6429_test.pdf",
+    "size_kb": 0.0,
+    "extracted_text": "Professional Summary: Experienced Nurse. Skills: Patient Care, HIPAA Compliance. Experience: 10 years at General Hospital.",
+    "skills": [
+      "Patient Care",
+      "HIPAA"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Patient Care",
+        "HIPAA"
+      ],
+      "important": [],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 2,
+    "score": 11,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+    "score_breakdown": {
+      "critical": 6.2,
+      "important": 0.0,
+      "structure": 5,
+      "action_verbs": 0.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Healthcare Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Healthcare Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "Clinical Assessment",
+        "EMR",
+        "Medication Administration",
+        "Vitals Monitoring",
+        "Infection Control"
+      ],
+      "important_gaps": [
+        "Patient Education",
+        "Medical Coding",
+        "ICD-10",
+        "BLS",
+        "ACLS"
+      ],
+      "summary": "Missing 11 critical skills identified in the Healthcare domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Healthcare Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Healthcare domain."
+    }
+  },
+  {
+    "id": "5834c736000a4f5f9af5ae2955a96e62",
+    "success": true,
+    "analysis_id": "5834c736000a4f5f9af5ae2955a96e62",
+    "message": "'test.pdf' uploaded and analysed successfully!",
+    "filename": "75c22671_test.pdf",
+    "size_kb": 0.0,
+    "extracted_text": "Professional Summary: Experienced Nurse. Skills: Patient Care, HIPAA Compliance. Experience: 10 years at General Hospital.",
+    "skills": [
+      "Patient Care",
+      "HIPAA"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Patient Care",
+        "HIPAA"
+      ],
+      "important": [],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 2,
+    "score": 11,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+    "score_breakdown": {
+      "critical": 6.2,
+      "important": 0.0,
+      "structure": 5,
+      "action_verbs": 0.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Healthcare Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Healthcare Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "Clinical Assessment",
+        "EMR",
+        "Medication Administration",
+        "Vitals Monitoring",
+        "Infection Control"
+      ],
+      "important_gaps": [
+        "Patient Education",
+        "Medical Coding",
+        "ICD-10",
+        "BLS",
+        "ACLS"
+      ],
+      "summary": "Missing 11 critical skills identified in the Healthcare domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 11/100 based on Healthcare industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Healthcare Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Healthcare domain."
+    }
+  },
+  {
+    "id": "97eea5eabeb04407ae60365ac7ba2709",
+    "success": true,
+    "analysis_id": "97eea5eabeb04407ae60365ac7ba2709",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "Docker",
+      "AWS",
+      "REST API",
+      "React",
+      "Node.js",
+      "CI/CD",
+      "Linux"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Python",
+        "Java",
+        "SQL",
+        "Git",
+        "Docker",
+        "AWS",
+        "REST API",
+        "React",
+        "Node.js",
+        "CI/CD"
+      ],
+      "important": [
+        "Linux"
+      ],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 11,
+    "score": 31,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 31/100 based on Engineering industry standards.",
+    "score_breakdown": {
+      "critical": 23.5,
+      "important": 1.6,
+      "structure": 5,
+      "action_verbs": 1.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Engineering Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Engineering Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "C++",
+        "Kubernetes",
+        "Microservices",
+        "Data Structures",
+        "Algorithms"
+      ],
+      "important_gaps": [
+        "NoSQL",
+        "Redis",
+        "Kafka",
+        "TensorFlow",
+        "PyTorch"
+      ],
+      "summary": "Missing 7 critical skills identified in the Engineering domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 31/100 based on Engineering industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Engineering Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 7 critical skills identified in the Engineering domain."
+    }
+  },
+  {
+    "id": "69b6752901f24de2b05a9b364793c07d",
+    "success": true,
+    "analysis_id": "69b6752901f24de2b05a9b364793c07d",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "Docker",
+      "REST API",
+      "AWS",
+      "React",
+      "Node.js",
+      "CI/CD",
+      "Linux"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Python",
+        "Java",
+        "SQL",
+        "Git",
+        "Docker",
+        "REST API"
+      ],
+      "important": [
+        "AWS",
+        "React",
+        "Node.js",
+        "CI/CD",
+        "Linux"
+      ],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 11,
+    "score": 26,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+    "score_breakdown": {
+      "critical": 14.1,
+      "important": 5.4,
+      "structure": 5,
+      "action_verbs": 1.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Engineering Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Engineering Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "C++",
+        "AutoCAD",
+        "CAD",
+        "MATLAB",
+        "Mechanical Engineering"
+      ],
+      "important_gaps": [
+        "SolidWorks",
+        "Kubernetes",
+        "Microservices",
+        "Unit Testing",
+        "NoSQL"
+      ],
+      "summary": "Missing 11 critical skills identified in the Engineering domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Engineering Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Engineering domain."
+    }
+  },
+  {
+    "id": "c7c2f5074c3b4c1aaf93bbc946e34572",
+    "success": true,
+    "analysis_id": "c7c2f5074c3b4c1aaf93bbc946e34572",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "Docker",
+      "REST API",
+      "AWS",
+      "React",
+      "Node.js",
+      "CI/CD",
+      "Linux"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Python",
+        "Java",
+        "SQL",
+        "Git",
+        "Docker",
+        "REST API"
+      ],
+      "important": [
+        "AWS",
+        "React",
+        "Node.js",
+        "CI/CD",
+        "Linux"
+      ],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 11,
+    "score": 26,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+    "score_breakdown": {
+      "critical": 14.1,
+      "important": 5.4,
+      "structure": 5,
+      "action_verbs": 1.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Engineering Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Engineering Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "C++",
+        "AutoCAD",
+        "CAD",
+        "MATLAB",
+        "Mechanical Engineering"
+      ],
+      "important_gaps": [
+        "SolidWorks",
+        "Kubernetes",
+        "Microservices",
+        "Unit Testing",
+        "NoSQL"
+      ],
+      "summary": "Missing 11 critical skills identified in the Engineering domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Engineering Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Engineering domain."
+    }
+  },
+  {
+    "id": "206fb6fc56084f2ca85aa28d4d7e98f7",
+    "success": true,
+    "analysis_id": "206fb6fc56084f2ca85aa28d4d7e98f7",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "Docker",
+      "REST API",
+      "AWS",
+      "React",
+      "Node.js",
+      "CI/CD",
+      "Linux"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Python",
+        "Java",
+        "SQL",
+        "Git",
+        "Docker",
+        "REST API"
+      ],
+      "important": [
+        "AWS",
+        "React",
+        "Node.js",
+        "CI/CD",
+        "Linux"
+      ],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 11,
+    "score": 26,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+    "score_breakdown": {
+      "critical": 14.1,
+      "important": 5.4,
+      "structure": 5,
+      "action_verbs": 1.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Engineering Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Engineering Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "C++",
+        "AutoCAD",
+        "CAD",
+        "MATLAB",
+        "Mechanical Engineering"
+      ],
+      "important_gaps": [
+        "SolidWorks",
+        "Kubernetes",
+        "Microservices",
+        "Unit Testing",
+        "NoSQL"
+      ],
+      "summary": "Missing 11 critical skills identified in the Engineering domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Engineering Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Engineering domain."
+    }
+  },
+  {
+    "id": "762a8b9aa26a41f690557eea055bd7ac",
+    "success": true,
+    "analysis_id": "762a8b9aa26a41f690557eea055bd7ac",
+    "message": "Demo resume analysed successfully!",
+    "filename": "demo_resume_priya_sharma.pdf",
+    "size_kb": 142.5,
+    "extracted_text": "PRIYA SHARMA\n    Full Stack Developer | Mumbai, India\n    Email: priya.sharma@email.com | LinkedIn: linkedin.com/in/priyasharma\n\n    SUMMARY\n    Passionate computer science graduate with hands-on experience in web development\n    and data analysis. Seeking a challenging role to leverage my skills in Python,\n    machine learning, and cloud computing.\n\n    EDUCATION\n    B.E. Computer Science, University of Mumbai (2022-2026) – CGPA: 8.5/10\n\n    SKILLS\n    Python, Java, JavaScript, HTML, CSS, SQL, React, Node.js, Flask, Git,\n    Machine Learning, Data Analysis, REST API, MongoDB, Docker, AWS, Linux\n\n    EXPERIENCE\n    Software Development Intern – TechSolutions Pvt. Ltd. (June 2025 - Dec 2025)\n    - Developed RESTful APIs using Flask and Node.js\n    - Built responsive frontends with React and JavaScript\n    - Implemented CI/CD pipelines using Docker and AWS\n\n    PROJECTS\n    1. AI Resume Analyzer – Python, Flask, NLP\n    2. E-Commerce Dashboard – React, Node.js, MongoDB\n    3. Weather Prediction System – Python, Machine Learning, Data Analysis\n\n    CERTIFICATIONS\n    - AWS Cloud Practitioner\n    - Google Data Analytics Certificate",
+    "skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "Docker",
+      "REST API",
+      "AWS",
+      "React",
+      "Node.js",
+      "CI/CD",
+      "Linux"
+    ],
+    "skills_categorized": {
+      "critical": [
+        "Python",
+        "Java",
+        "SQL",
+        "Git",
+        "Docker",
+        "REST API"
+      ],
+      "important": [
+        "AWS",
+        "React",
+        "Node.js",
+        "CI/CD",
+        "Linux"
+      ],
+      "bonus": [],
+      "soft_skills": []
+    },
+    "skills_total": 11,
+    "score": 26,
+    "score_level": "Entry",
+    "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+    "score_breakdown": {
+      "critical": 14.1,
+      "important": 5.4,
+      "structure": 5,
+      "action_verbs": 1.0,
+      "length": 0
+    },
+    "risk_level": "High",
+    "risk_icon": "⚠️",
+    "risk_reason": "Risk level is High based on your ATS score.",
+    "risk_suggestions": [
+      "Add more technical keywords.",
+      "Quantify your achievements."
+    ],
+    "career_predictions": [
+      {
+        "role": "Engineering Professional",
+        "match_percentage": 100,
+        "reason": "Based on your selected domain."
+      }
+    ],
+    "role": "Engineering Professional",
+    "skill_gap": {
+      "critical_gaps": [
+        "C++",
+        "AutoCAD",
+        "CAD",
+        "MATLAB",
+        "Mechanical Engineering"
+      ],
+      "important_gaps": [
+        "SolidWorks",
+        "Kubernetes",
+        "Microservices",
+        "Unit Testing",
+        "NoSQL"
+      ],
+      "summary": "Missing 11 critical skills identified in the Engineering domain."
+    },
+    "explainability": {
+      "score_reason": "Your resume scored 26/100 based on Engineering industry standards.",
+      "risk_reason": "Risk level is High based on your ATS score.",
+      "risk_suggestions": [
+        "Add more technical keywords.",
+        "Quantify your achievements."
+      ],
+      "career_reasons": [
+        {
+          "role": "Engineering Professional",
+          "match": 100,
+          "reason": "Based on your selected domain."
+        }
+      ],
+      "skill_gap_reason": "Missing 11 critical skills identified in the Engineering domain."
+    }
+  }
+]

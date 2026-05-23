@@ -1,0 +1,11 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.8.10, pytest-7.4.4, pluggy-1.5.0
+rootdir: C:\Users\Shuddhodhan\.gemini\antigravity\scratch\careerforge 2- Copy - Copy\careerforge
+plugins: anyio-3.7.1, asyncio-0.23.3, base-url-2.1.0, playwright-0.5.2
+asyncio: mode=strict
+collected 7 items
+
+tests\test_agents.py ....                                                [ 57%]
+tests\test_auth.py s..                                                   [100%]
+
+======================== 6 passed, 1 skipped in 3.39s =========================

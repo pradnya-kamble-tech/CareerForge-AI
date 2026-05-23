@@ -1,0 +1,532 @@
+# ⚙️ CareerForge AI V2 — AI Pipeline Module Specification
+
+## Complete Module Architecture with Dependencies & Data Flow
+
+> **Purpose**: Define EXACTLY what each AI module does, its inputs, outputs, and dependencies
+> **No code, no implementation steps** — only module contracts and data flow
+
+---
+
+## 🗺️ Module Dependency Graph
+
+```mermaid
+graph TD
+    M1["M1: Data Understanding\n& Role Mapping"] --> M2["M2: Text Preprocessing\nPipeline"]
+    M2 --> M3["M3: Feature Extraction\nEngine"]
+    M3 --> M4["M4: Role Classification\nModel"]
+    M2 --> M5["M5: Skill Extraction\nModel"]
+    M4 --> M6["M6: Resume Scoring\nModel"]
+    M5 --> M6
+    M3 --> M6
+    M6 --> M7["M7: Risk Prediction\nModel"]
+    M3 --> M7
+    M3 --> M8["M8: Job Description\nMatching Engine"]
+    M4 --> M9["M9: Career Trajectory\nModel"]
+    M5 --> M9
+    M4 --> M10["M10: Digital Twin\nSimulator"]
+    M5 --> M10
+    M6 --> M10
+    M7 --> M10
+    M4 --> M11["M11: Explainable AI\nLayer"]
+    M6 --> M11
+    M7 --> M11
+    M4 --> M12["M12: Model Output\nStorage"]
+    M5 --> M12
+    M6 --> M12
+    M7 --> M12
+    M8 --> M12
+    M9 --> M12
+    M11 --> M12
+
+    style M1 fill:#1a1a2e,stroke:#e94560,color:#fff
+    style M2 fill:#1a1a2e,stroke:#e94560,color:#fff
+    style M3 fill:#1a1a2e,stroke:#0f3460,color:#fff
+    style M4 fill:#16213e,stroke:#e94560,color:#fff
+    style M5 fill:#16213e,stroke:#e94560,color:#fff
+    style M6 fill:#0f3460,stroke:#e94560,color:#fff
+    style M7 fill:#0f3460,stroke:#e94560,color:#fff
+    style M8 fill:#0f3460,stroke:#e94560,color:#fff
+    style M9 fill:#533483,stroke:#e94560,color:#fff
+    style M10 fill:#533483,stroke:#e94560,color:#fff
+    style M11 fill:#e94560,stroke:#fff,color:#fff
+    style M12 fill:#2b2d42,stroke:#e94560,color:#fff
+```
+
+---
+
+## 📌 MODULE 1 — Data Understanding & Role Mapping
+
+> **Build Order**: 🥇 First — foundation for everything
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Identify, clean, and standardize all job role categories from the Kaggle dataset |
+| **Input** | Raw dataset CSV (2,484 resumes with `Category` column) |
+| **Output** | Clean, standardized role label map |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `role_labels` | Standardized list of 25 unique role names |
+| `role_distribution` | Count of resumes per role (for class balance analysis) |
+| `label_encoding` | Numerical mapping (0–24) for model training |
+| `imbalanced_roles` | Roles with < 50 resumes flagged for handling |
+
+### Role Map (from dataset)
+
+| # | Raw Category | Standardized Label | Expected Count |
+|---|-------------|-------------------|----------------|
+| 1 | HR | HR | ~96 |
+| 2 | Designer | Designer | ~96 |
+| 3 | Information-Technology | Information Technology | ~96 |
+| 4 | Teacher | Teacher | ~96 |
+| 5 | Advocate | Advocate | ~96 |
+| 6 | Business-Development | Business Development | ~96 |
+| 7 | Healthcare | Healthcare | ~96 |
+| 8 | Fitness | Fitness | ~96 |
+| 9 | Agriculture | Agriculture | ~96 |
+| 10 | BPO | BPO | ~96 |
+| 11 | Sales | Sales | ~96 |
+| 12 | Consultant | Consultant | ~96 |
+| 13 | Digital-Media | Digital Media | ~96 |
+| 14 | Automobile | Automobile | ~96 |
+| 15 | Chef | Chef | ~96 |
+| 16 | Finance | Finance | ~96 |
+| 17 | Apparel | Apparel | ~96 |
+| 18 | Engineering | Engineering | ~96 |
+| 19 | Accountant | Accountant | ~96 |
+| 20 | Construction | Construction | ~96 |
+| 21 | Public-Relations | Public Relations | ~96 |
+| 22 | Banking | Banking | ~96 |
+| 23 | Arts | Arts | ~96 |
+| 24 | Aviation | Aviation | ~96 |
+
+> [!NOTE]
+> Dataset has ~2,484 resumes across 25 categories ≈ ~96 per category (roughly balanced).
+
+### Dependencies
+- **Depends on**: Nothing (first module)
+- **Required by**: ALL subsequent modules
+
+---
+
+## 📌 MODULE 2 — Text Preprocessing Pipeline
+
+> **Build Order**: 🥈 Second — required by all models
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Clean and normalize raw resume text for ML consumption |
+| **Input** | Raw `Resume_str` text from dataset (or newly uploaded resumes) |
+| **Output** | Cleaned, normalized text tokens |
+
+### Processing Steps (WHAT, not HOW)
+
+| Step | Input | Output |
+|------|-------|--------|
+| HTML Stripping | `Resume_html` or raw text with HTML tags | Plain text |
+| Lowercasing | Mixed-case text | All lowercase text |
+| Special Character Removal | Text with symbols, URLs, emails | Clean alphanumeric text |
+| Stopword Removal | Text with common words (the, is, at) | Content words only |
+| Token Normalization | Varied word forms | Standardized tokens |
+| Whitespace Normalization | Multiple spaces, tabs | Single-space separated |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `cleaned_text` | Full cleaned text string |
+| `tokens` | List of individual processed words |
+| `token_count` | Number of tokens (for feature engineering) |
+| `char_count` | Character count of cleaned text |
+
+### Dependencies
+- **Depends on**: M1 (role mapping for label association)
+- **Required by**: M3, M4, M5, M6, M7, M8, M9, M10, M11
+
+---
+
+## 📌 MODULE 3 — Feature Extraction Engine
+
+> **Build Order**: 🥉 Third — converts text to numbers
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Transform cleaned text into numerical feature vectors for ML models |
+| **Input** | Cleaned text from M2 |
+| **Output** | Numerical feature vectors |
+
+### Feature Types to Generate
+
+| Feature Type | What It Produces | Used By |
+|-------------|-----------------|---------|
+| **TF-IDF Vectors** | Sparse matrix of term importance | Role classifier, Scorer, Risk predictor |
+| **Text Embeddings** | Dense semantic vectors (fixed-size) | Matching engine, Similarity search |
+| **Statistical Features** | Token count, unique words, avg word length, section count | Scoring model, Risk model |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `tfidf_vector` | Sparse feature vector (top N terms) |
+| `embedding_vector` | Dense vector (e.g., 768-dim) |
+| `statistical_features` | Dict of numerical text statistics |
+| `combined_features` | Merged feature set for model input |
+
+### Dependencies
+- **Depends on**: M2 (cleaned text)
+- **Required by**: M4, M6, M7, M8
+
+---
+
+## 📌 MODULE 4 — Role Classification Model
+
+> **Build Order**: 4th — core prediction engine
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Predict the most suitable job role from a resume |
+| **Input** | TF-IDF feature vectors from M3 |
+| **Output** | Predicted role + confidence scores |
+
+### Model Candidates to Train & Compare
+
+| Model | Why Include |
+|-------|------------|
+| Multinomial Naive Bayes | Fast baseline for text classification |
+| Logistic Regression | Strong linear baseline with probability output |
+| Random Forest | Non-linear, handles feature interactions |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `predicted_role` | Single best role (1 of 25 categories) |
+| `confidence` | Probability of the predicted role (0.0–1.0) |
+| `top_3_roles` | Top 3 roles with individual probabilities |
+| `full_distribution` | Probability across all 25 categories |
+| `model_used` | Which model produced this prediction |
+
+### Dependencies
+- **Depends on**: M3 (feature vectors)
+- **Required by**: M6, M9, M10, M11, M12
+
+---
+
+## 📌 MODULE 5 — Skill Extraction Model (AI Version)
+
+> **Build Order**: 4th (parallel with M4) — can be built alongside role classifier
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Extract and categorize skills from resume text using AI pattern recognition |
+| **Input** | Cleaned resume text from M2 |
+| **Output** | Structured skill inventory |
+
+### What It Extracts
+
+| Skill Category | Examples |
+|---------------|----------|
+| **Technical Skills** | Python, Machine Learning, SQL, AWS |
+| **Soft Skills** | Leadership, Communication, Teamwork |
+| **Tools & Platforms** | Git, Docker, Jira, Figma |
+| **Domain Knowledge** | Financial Analysis, Healthcare Compliance |
+| **Certifications** | AWS Certified, PMP, CPA |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `skills_list` | Flat list of all extracted skills |
+| `categorized_skills` | Dict grouped by category |
+| `skill_count` | Total number of skills found |
+| `category_distribution` | Count per category |
+| `proficiency_hints` | Inferred level per skill (based on context frequency) |
+
+### Dependencies
+- **Depends on**: M2 (cleaned text)
+- **Required by**: M6, M9, M10, M12
+
+---
+
+## 📌 MODULE 6 — Resume Scoring Model
+
+> **Build Order**: 5th — needs M4 and M5 outputs
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Produce a data-driven quality score (0–100) for any resume |
+| **Input** | Feature vectors (M3) + Predicted role (M4) + Extracted skills (M5) |
+| **Output** | Composite quality score with breakdown |
+
+### Scoring Dimensions
+
+| Dimension | Weight | What It Measures |
+|-----------|--------|-----------------|
+| **Skill Relevance** | 30% | How well skills match the predicted role |
+| **Skill Volume** | 20% | Total number and diversity of skills |
+| **Experience Indicators** | 20% | Keywords suggesting work experience depth |
+| **Role Alignment** | 15% | Confidence of role classification |
+| **Completeness** | 15% | Presence of resume sections (education, projects, etc.) |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `total_score` | 0–100 composite score |
+| `dimension_scores` | Individual scores per dimension |
+| `percentile_rank` | Position relative to same-role resumes |
+| `score_level` | Excellent (80+) / Good (60–79) / Average (40–59) / Weak (<40) |
+| `scoring_explanation` | Text explaining score drivers |
+
+### Dependencies
+- **Depends on**: M3 (features) + M4 (role) + M5 (skills)
+- **Required by**: M7, M10, M11, M12
+
+---
+
+## 📌 MODULE 7 — Risk Prediction Model
+
+> **Build Order**: 6th — needs scoring output
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Predict the probability that a resume will be rejected |
+| **Input** | Resume score (M6) + Feature vectors (M3) + Skills data (M5) |
+| **Output** | Risk probability and actionable mitigation |
+
+### Risk Factors Analyzed
+
+| Factor | Impact Signal |
+|--------|--------------|
+| Low skill count | Higher rejection probability |
+| Weak role alignment | Poor fit for target positions |
+| Missing key sections | Incomplete resume |
+| Below-average score | Underperforming vs. peer resumes |
+| Low skill diversity | Limited versatility |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `risk_probability` | 0–100% likelihood of rejection |
+| `risk_level` | Low (0–30%) / Medium (30–60%) / High (60–100%) |
+| `risk_factors` | List of specific weaknesses driving risk |
+| `mitigation_actions` | Prioritized suggestions to reduce risk |
+| `risk_trend` | Compared to similar-role candidates |
+
+### Dependencies
+- **Depends on**: M6 (score) + M3 (features) + M5 (skills)
+- **Required by**: M10, M11, M12
+
+---
+
+## 📌 MODULE 8 — Job Description Matching Engine
+
+> **Build Order**: 6th (parallel with M7) — independent of scoring
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Compute semantic similarity between a resume and a job description |
+| **Input** | Resume embedding (M3) + Job description text (user-provided) |
+| **Output** | Match percentage and breakdown |
+
+### Matching Dimensions
+
+| Dimension | What It Compares |
+|-----------|-----------------|
+| **Semantic Similarity** | Overall meaning overlap (embeddings) |
+| **Skill Match** | Skills in resume vs. skills in JD |
+| **Role Alignment** | Predicted role vs. JD target role |
+| **Experience Match** | Experience level indicators in both texts |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `match_percentage` | 0–100% overall compatibility |
+| `dimension_breakdown` | Score per matching dimension |
+| `matching_skills` | Skills found in both resume and JD |
+| `missing_skills` | Skills in JD but not in resume |
+| `candidate_rank` | Position relative to other candidates for this JD |
+
+### Dependencies
+- **Depends on**: M3 (embeddings) + M5 (skills)
+- **Required by**: M12
+
+---
+
+## 📌 MODULE 9 — Career Trajectory Model
+
+> **Build Order**: 7th — built after role + skill modules are stable
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Predict likely next career moves based on current profile |
+| **Input** | Predicted role (M4) + Extracted skills (M5) |
+| **Output** | Future role predictions with transition probabilities |
+
+### Trajectory Sources
+
+| Source | What It Provides |
+|--------|-----------------|
+| **Cross-role skill overlap** | Roles sharing many skills are natural transitions |
+| **Dataset patterns** | Shared skill clusters across different role categories |
+| **Skill adjacency** | Skills that frequently co-occur suggest transition paths |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `next_roles` | Top 3–5 predicted next career roles |
+| `transition_probability` | Likelihood of each transition (0–100%) |
+| `required_skills` | Skills needed to unlock each transition |
+| `current_readiness` | % of required skills already present |
+| `transition_graph` | Network data for visual career path rendering |
+
+### Dependencies
+- **Depends on**: M4 (predicted role) + M5 (skills)
+- **Required by**: M10, M12
+
+---
+
+## 📌 MODULE 10 — Digital Twin Simulator (AI Version)
+
+> **Build Order**: 8th — aggregator module, needs all prediction models
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Simulate resume modifications and predict their impact through AI re-prediction |
+| **Input** | Current resume + user-specified changes (add skill, change target role, etc.) |
+| **Output** | Before/after comparison across all prediction dimensions |
+
+### Simulation Types
+
+| Simulation | What Changes | What Gets Re-Predicted |
+|-----------|-------------|----------------------|
+| **Add Skill** | Inject a new skill into the resume | Score, Role, Risk, Career paths |
+| **Remove Weakness** | Address a flagged risk factor | Risk level, Score change |
+| **Target New Role** | Change the target role for gap analysis | Skill gap, Readiness %, Learning path |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `before_state` | Snapshot of all current predictions |
+| `after_state` | Snapshot of all predictions after simulation |
+| `score_delta` | Numeric change in score |
+| `role_shift` | Changes in top-3 role predictions |
+| `risk_delta` | Change in risk probability |
+| `improvement_summary` | Natural-language explanation of impact |
+
+### Dependencies
+- **Depends on**: M4 + M5 + M6 + M7 + M9 (ALL prediction models)
+- **Required by**: M11, M12
+
+---
+
+## 📌 MODULE 11 — Explainable AI (XAI) Layer
+
+> **Build Order**: 9th — runs on top of all model outputs
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Generate human-readable explanations for every AI prediction |
+| **Input** | Outputs from M4, M6, M7, M9, M10 |
+| **Output** | Explanation text + feature importance data |
+
+### Explanation Targets
+
+| Prediction | Explanation Format |
+|-----------|-------------------|
+| **Role Classification** | "Classified as [role] because: [top contributing features], confidence: [X%]" |
+| **Resume Score** | "Score [X/100] driven by: [dimension breakdown with positive/negative factors]" |
+| **Risk Level** | "[Risk level] because: [specific weaknesses], mitigate by: [actions]" |
+| **Career Trajectory** | "Predicted [role] transition because: [shared skill patterns], readiness: [X%]" |
+| **Simulation** | "Adding [skill] would: [impact summary] because [reasoning]" |
+
+### Output Specification
+
+| Output Field | Detail |
+|-------------|--------|
+| `explanation_text` | Full natural-language explanation |
+| `feature_importance` | Top features/words contributing to prediction |
+| `confidence_factors` | What makes the prediction confident/uncertain |
+| `comparison_context` | How this resume compares to others in the same category |
+
+### Dependencies
+- **Depends on**: M4, M6, M7, M9, M10 (all prediction outputs)
+- **Required by**: M12
+
+---
+
+## 📌 MODULE 12 — Model Output Storage
+
+> **Build Order**: 10th (final) — persistence layer for all outputs
+
+| Attribute | Definition |
+|-----------|-----------|
+| **Purpose** | Persist all AI predictions to the dedicated AI database |
+| **Input** | Outputs from ALL modules (M4–M11) |
+| **Output** | Stored records in `resumes_ai`, `model_outputs`, `similarity_cache` tables |
+
+### Storage Map
+
+| Module Output | Stored In | Key Fields |
+|--------------|-----------|------------|
+| Role prediction (M4) | `resumes_ai` | `predicted_role`, `confidence` |
+| Skills (M5) | `resumes_ai` + `skills_master` | Skill records + associations |
+| Score (M6) | `resumes_ai` | [score](file:///c:/Users/Shuddhodhan/.gemini/antigravity/scratch/careerforge%202-%20Copy/analyzer.py#62-142) |
+| Risk (M7) | `resumes_ai` | `risk_probability`, `risk_level` |
+| Match results (M8) | `model_outputs` | `predictions` (JSON) |
+| Career paths (M9) | `model_outputs` | `predictions` (JSON) |
+| Simulations (M10) | `model_outputs` | `predictions` (JSON) |
+| Explanations (M11) | `model_outputs` | `explanation` |
+| Embeddings (M3) | `resumes_ai` | `embeddings` (vector) |
+
+### Dependencies
+- **Depends on**: ALL modules (M4–M11)
+- **Required by**: Frontend dashboard, Admin insights, Recruiter views
+
+---
+
+## 🔄 Complete Pipeline Execution Order
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  BUILD ORDER            EXECUTION ORDER (per resume)            │
+│                                                                 │
+│  1. M1 (Role Mapping)   ──→  Done once during setup            │
+│  2. M2 (Preprocessing)  ──→  Step 1: Clean text                │
+│  3. M3 (Features)       ──→  Step 2: Extract features          │
+│  4. M4 (Role) ═══╗      ──→  Step 3: Predict role              │
+│  4. M5 (Skills)══╝      ──→  Step 3: Extract skills (parallel) │
+│  5. M6 (Scoring)        ──→  Step 4: Calculate score           │
+│  6. M7 (Risk) ═══╗      ──→  Step 5: Predict risk              │
+│  6. M8 (Match)═══╝      ──→  Step 5: Match JDs (parallel)     │
+│  7. M9 (Trajectory)     ──→  Step 6: Career prediction         │
+│  8. M10 (Simulator)     ──→  Step 7: Ready for simulation      │
+│  9. M11 (XAI)           ──→  Step 8: Generate explanations     │
+│ 10. M12 (Storage)       ──→  Step 9: Persist everything        │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📊 Module Summary Matrix
+
+| Module | Type | Depends On | Produces For | Parallel? |
+|--------|------|-----------|-------------|-----------|
+| M1 | Data Setup | — | All | No (one-time) |
+| M2 | Preprocessing | M1 | M3, M5 | No (sequential) |
+| M3 | Feature Engineering | M2 | M4, M6, M7, M8 | No (sequential) |
+| M4 | ML Model | M3 | M6, M9, M10, M11 | ✅ with M5 |
+| M5 | Extraction | M2 | M6, M8, M9, M10 | ✅ with M4 |
+| M6 | ML Model | M3, M4, M5 | M7, M10, M11 | No (needs M4+M5) |
+| M7 | ML Model | M3, M5, M6 | M10, M11 | ✅ with M8 |
+| M8 | Similarity Engine | M3, M5 | M12 | ✅ with M7 |
+| M9 | Pattern Analysis | M4, M5 | M10, M12 | No |
+| M10 | Aggregator | M4–M9 | M11, M12 | No |
+| M11 | XAI | M4, M6, M7 | M12 | No |
+| M12 | Storage | ALL | Frontend | No (final) |

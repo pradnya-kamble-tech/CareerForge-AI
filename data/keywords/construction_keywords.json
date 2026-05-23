@@ -1,0 +1,61 @@
+{
+    "critical": [
+        "Project Management",
+        "Construction Management",
+        "Site Safety",
+        "OSHA Compliance",
+        "Blueprint Reading",
+        "Estimating",
+        "Contractor Management",
+        "Scheduling",
+        "Structural Engineering",
+        "Materials Management",
+        "Zoning Regulations",
+        "Sustainability",
+        "Civil Engineering"
+    ],
+    "important": [
+        "Budgeting",
+        "AutoCAD",
+        "BIM (Building Information Modeling)",
+        "Site Inspection",
+        "Quality Assurance",
+        "Vendor Management",
+        "Risk Management",
+        "Equipment Operation",
+        "Landscape Design",
+        "Electrical/Plumbing Codes"
+    ],
+    "bonus": [
+        "Green Building",
+        "Drones in Construction",
+        "Smart City Integration",
+        "Lean Construction",
+        "Infrastructure Development",
+        "Property Development",
+        "Contract Negotiation",
+        "Surveying"
+    ],
+    "action_verbs": [
+        "Constructed",
+        "Built",
+        "Managed",
+        "Inspected",
+        "Estimated",
+        "Supervised",
+        "Coordinated",
+        "Drafted",
+        "Developed",
+        "Executed"
+    ],
+    "soft_skills": [
+        "Precision",
+        "Accountability",
+        "Leadership",
+        "Safety Consciousness",
+        "Problem-solving",
+        "Team Collaboration",
+        "Physical Stamina",
+        "Resourcefulness"
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "critical": [
+        "Curriculum Development",
+        "Classroom Management",
+        "Lesson Planning",
+        "Educational Technology",
+        "Student Assessment",
+        "Special Education",
+        "Differentiated Instruction",
+        "Pedagogy",
+        "Standardized Testing",
+        "Literacy Instruction",
+        "Educational Psychology",
+        "K-12 Education",
+        "Higher Education"
+    ],
+    "important": [
+        "LMS (Learning Management Systems)",
+        "Professional Development",
+        "Instructional Design",
+        "Student Engagement",
+        "Parent-Teacher Relations",
+        "Diversity and Inclusion",
+        "STEM Education",
+        "Action Research",
+        "Blended Learning"
+    ],
+    "bonus": [
+        "Early Childhood Education",
+        "E-learning Development",
+        "Educational Leadership",
+        "Counseling",
+        "ESL Instruction",
+        "Grant Writing",
+        "Academic Advising",
+        "School Administration"
+    ],
+    "action_verbs": [
+        "Instructed",
+        "Educated",
+        "Mentored",
+        "Facilitated",
+        "Evaluated",
+        "Collaborated",
+        "Developed",
+        "Inspired",
+        "Administered",
+        "Taught"
+    ],
+    "soft_skills": [
+        "Patience",
+        "Empathy",
+        "Creativity",
+        "Communication",
+        "Adaptability",
+        "Active Listening",
+        "Collaborative Spirit",
+        "Conflict Resolution"
+    ]
+}

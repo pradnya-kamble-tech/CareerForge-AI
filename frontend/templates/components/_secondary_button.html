@@ -1,0 +1,19 @@
+{% macro cf_secondary_button(
+url='',
+text='',
+id='',
+extra_classes='',
+extra_attrs='',
+aria_label='',
+disabled=False,
+loading=False,
+mobile_full=False,
+inline_style=''
+) %}
+<a href="{{ url if not disabled and not loading else 'javascript:void(0)' }}" id="{{ id }}"
+    class="cf-secondary-btn {{ extra_classes|default('') }} cf-flex-center {{ 'cf-full-width' if mobile_full }}"
+    style="{{ inline_style }}" aria-label="{{ aria_label or text }}" {% if disabled or loading %}disabled{% endif %} {%
+    if loading %}data-loading="true" {% endif %} {{ extra_attrs|safe }}>
+    {{ text }}
+</a>
+{% endmacro %}

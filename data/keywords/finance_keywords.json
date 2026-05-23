@@ -1,0 +1,64 @@
+{
+    "critical": [
+        "Financial Analysis",
+        "Accounting",
+        "Risk Management",
+        "Portfolio Management",
+        "Tax Preparation",
+        "Audit",
+        "Financial Modeling",
+        "CFA",
+        "CPA",
+        "IFRS",
+        "GAAP",
+        "Forecasting",
+        "Budgeting",
+        "Wealth Management"
+    ],
+    "important": [
+        "Investment Banking",
+        "Equities",
+        "Fixed Income",
+        "Derivatives",
+        "Compliance",
+        "Internal Controls",
+        "SAP",
+        "Oracle Financials",
+        "Excel VBA",
+        "QuickBooks",
+        "Regulatory Reporting",
+        "Anti-Money Laundering"
+    ],
+    "bonus": [
+        "FinTech",
+        "Cryptocurrency",
+        "Alternative Investments",
+        "Private Equity",
+        "Venture Capital",
+        "Mergers & Acquisitions",
+        "Estate Planning",
+        "Derivatives Trading"
+    ],
+    "action_verbs": [
+        "Analyzed",
+        "Audited",
+        "Forecasted",
+        "Reconciled",
+        "Budgeted",
+        "Consulted",
+        "Maximized",
+        "Mitigated",
+        "Formulated",
+        "Reported"
+    ],
+    "soft_skills": [
+        "Analytical Skills",
+        "Integrity",
+        "Strategic Thinking",
+        "Precision",
+        "Confidentiality",
+        "Professionalism",
+        "Data-driven Decision Making",
+        "Relationship Management"
+    ]
+}
