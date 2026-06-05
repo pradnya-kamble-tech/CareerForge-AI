@@ -40,6 +40,7 @@ careerforge/
 
 ---
 
+
 ## 🛠️ Setup in 3 Quick Steps
 
 Follow these steps to get the platform running with real AI analysis:
