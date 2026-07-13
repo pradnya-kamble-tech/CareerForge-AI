@@ -16,6 +16,7 @@ An intelligent resume analysis platform that parses PDF resumes, extracts skills
 
 ---
 
+
 📁 Project Structure
 
 ```
